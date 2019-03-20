@@ -1,0 +1,6 @@
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.Dto\bin\Debug\VRA.Dto.dll
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.Dto\bin\Debug\VRA.Dto.pdb
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.csprojAssemblyReference.cache
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.csproj.CoreCompileInputs.cache
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.dll
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.pdb

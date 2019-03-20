@@ -1,0 +1,9 @@
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.BusinessLayer.dll
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.BusinessLayer.pdb
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.Dto.dll
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.Dto.pdb
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.csprojAssemblyReference.cache
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.csproj.CoreCompileInputs.cache
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.csproj.CopyComplete
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.dll
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.pdb

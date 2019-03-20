@@ -1,0 +1,26 @@
+﻿<Window x:Class="VRA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VRA"
+        mc:Ignorable="d"
+        Title="ViewRidgeAssistant" Height="454.762" Width="514.285">
+    <Grid>
+
+        <Button Name="btnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="10,383,0,0" VerticalAlignment="Top" Width="111" Click="btnAdd_Click"/>
+        <DataGrid Name="dgArtists" Height="372" VerticalAlignment="Top" Margin="10,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn Header="Год рождения" Binding="{Binding Path=BirthYear}"/>
+                <DataGridTextColumn Header="Год смерти" Binding="{Binding Path=DeceaseYear}"/>
+                <DataGridTextColumn Header="Национальность" Binding="{Binding Path=Nationality}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="btnRefresh" Content="Обновить" HorizontalAlignment="Left" Margin="136,383,0,0" VerticalAlignment="Top" Width="112" Click="btnRefresh_Click"/>
+        <Button Name="btnDelete" Content="Удалить" HorizontalAlignment="Left" Margin="385,383,0,0" VerticalAlignment="Top" Width="111" Click="btnDelete_Click"/>
+        <Button Name ="btnEdit" Content="Изменить" HorizontalAlignment="Left" Margin="261,383,0,0" VerticalAlignment="Top" Width="111" Click="btnEdit_Click"/>
+
+
+    </Grid>
+</Window>
