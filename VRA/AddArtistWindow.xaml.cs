@@ -100,8 +100,6 @@ namespace VRA
             artist.Nationality = cbNationality.SelectedItem.ToString();
             //Именно тут запрашиваем реализованную ранее задачу по работе с художниками
             IArtistProcess artistProcess = ProcessFactory.GetArtistProcess();
-            //Сохраняем художника
-            artistProcess.Add(artist);
             //если это новый объект - сохраняем его
             if (_id == 0)
             {

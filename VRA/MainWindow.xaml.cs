@@ -60,7 +60,8 @@ namespace VRA
             //Если все проверки пройдены и подтверждение получено, удаляем художника
             ProcessFactory.GetArtistProcess().Delete(item.Id);
             //И перезагружаем список художников
-            btnRefresh_Click(sender, e);
+            btnRefresh_Click(sender, e);
+
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)

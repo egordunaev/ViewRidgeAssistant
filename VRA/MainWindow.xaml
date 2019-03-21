@@ -10,12 +10,7 @@
 
         <Button Name="btnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="10,383,0,0" VerticalAlignment="Top" Width="111" Click="btnAdd_Click"/>
         <DataGrid Name="dgArtists" Height="372" VerticalAlignment="Top" Margin="10,0">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Имя" Binding="{Binding Path=Name}"/>
-                <DataGridTextColumn Header="Год рождения" Binding="{Binding Path=BirthYear}"/>
-                <DataGridTextColumn Header="Год смерти" Binding="{Binding Path=DeceaseYear}"/>
-                <DataGridTextColumn Header="Национальность" Binding="{Binding Path=Nationality}"/>
-            </DataGrid.Columns>
+            
         </DataGrid>
         <Button Name="btnRefresh" Content="Обновить" HorizontalAlignment="Left" Margin="136,383,0,0" VerticalAlignment="Top" Width="112" Click="btnRefresh_Click"/>
         <Button Name="btnDelete" Content="Удалить" HorizontalAlignment="Left" Margin="385,383,0,0" VerticalAlignment="Top" Width="111" Click="btnDelete_Click"/>

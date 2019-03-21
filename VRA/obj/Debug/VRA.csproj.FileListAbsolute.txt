@@ -20,3 +20,25 @@ D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.dll
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.pdb
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.pdb
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA\obj\Debug\VRA.csproj.CopyComplete
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\bin\Debug\VRA.exe.config
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\bin\Debug\VRA.exe
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\bin\Debug\VRA.pdb
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\bin\Debug\VRA.BusinessLayer.dll
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\bin\Debug\VRA.Dto.dll
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\bin\Debug\VRA.BusinessLayer.pdb
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\bin\Debug\VRA.Dto.pdb
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\VRA.csprojAssemblyReference.cache
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\AddArtistWindow.g.cs
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\MainWindow.g.cs
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\App.g.cs
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\VRA_MarkupCompile.cache
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\VRA_MarkupCompile.lref
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\AddArtistWindow.baml
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\MainWindow.baml
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\VRA.g.resources
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\VRA.Properties.Resources.resources
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\VRA.csproj.GenerateResource.cache
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\VRA.csproj.CoreCompileInputs.cache
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\VRA.csproj.CopyComplete
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\VRA.exe
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\VRA.pdb
