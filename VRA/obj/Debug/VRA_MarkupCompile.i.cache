@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA\obj\Debug\
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\
 VRA
 none
 false
 DEBUG;TRACE
-D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA\App.xaml
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\App.xaml
 22107541532
 
-10-322651544
-151184201182
+10-1517966964
+15-1579446717
 AddArtistWindow.xaml;MainWindow.xaml;
 
-False
+True
 

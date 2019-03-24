@@ -4,3 +4,9 @@ D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.cspr
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.csproj.CoreCompileInputs.cache
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.dll
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.pdb
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.Dto\bin\Debug\VRA.Dto.dll
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.Dto\bin\Debug\VRA.Dto.pdb
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.Dto\obj\Debug\VRA.Dto.csprojAssemblyReference.cache
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.Dto\obj\Debug\VRA.Dto.csproj.CoreCompileInputs.cache
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.Dto\obj\Debug\VRA.Dto.dll
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.Dto\obj\Debug\VRA.Dto.pdb
