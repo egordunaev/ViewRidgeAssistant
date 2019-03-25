@@ -1,0 +1,6 @@
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.DataAccess\bin\Debug\VRA.DataAccess.dll
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.DataAccess\bin\Debug\VRA.DataAccess.pdb
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.DataAccess\obj\Debug\VRA.DataAccess.csprojAssemblyReference.cache
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.DataAccess\obj\Debug\VRA.DataAccess.csproj.CoreCompileInputs.cache
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.DataAccess\obj\Debug\VRA.DataAccess.dll
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.DataAccess\obj\Debug\VRA.DataAccess.pdb

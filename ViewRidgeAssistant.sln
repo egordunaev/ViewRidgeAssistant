@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRA.BusinessLayer", "VRA.Bu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRA", "VRA\VRA.csproj", "{C97DB477-7B45-44B3-BB10-37793E82DE5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRA.DataAccess", "VRA.DataAccess\VRA.DataAccess.csproj", "{66B386CE-5D1D-41A4-8CF7-AEC16A4859B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C97DB477-7B45-44B3-BB10-37793E82DE5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C97DB477-7B45-44B3-BB10-37793E82DE5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C97DB477-7B45-44B3-BB10-37793E82DE5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B386CE-5D1D-41A4-8CF7-AEC16A4859B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B386CE-5D1D-41A4-8CF7-AEC16A4859B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B386CE-5D1D-41A4-8CF7-AEC16A4859B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B386CE-5D1D-41A4-8CF7-AEC16A4859B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

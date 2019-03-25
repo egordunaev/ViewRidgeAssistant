@@ -83,5 +83,11 @@ namespace VRA
             //Перезагружаем список объектов
             btnRefresh_Click(sender, e);
         }
+
+        private void btnDataBase_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsWindow window = new SettingsWindow();
+            window.ShowDialog();
+        }
     }
 }

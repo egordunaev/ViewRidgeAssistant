@@ -42,11 +42,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArtistProcess.cs" />
+    <Compile Include="ArtistProcessDb.cs" />
+    <Compile Include="Converters\DtoConverter.cs" />
     <Compile Include="IArtistProcess.cs" />
+    <Compile Include="ISettingsProcess.cs" />
     <Compile Include="ProcessFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsProcess.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\VRA.DataAccess\VRA.DataAccess.csproj">
+      <Project>{66b386ce-5d1d-41a4-8cf7-aec16a4859b0}</Project>
+      <Name>VRA.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VRA.Dto\VRA.Dto.csproj">
       <Project>{03f7b1cf-beed-4427-a441-4ceab7fc39d5}</Project>
       <Name>VRA.Dto</Name>

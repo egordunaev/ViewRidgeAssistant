@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VRA"
         mc:Ignorable="d"
-        Title="ViewRidgeAssistant" Height="454.762" Width="514.285">
+        Title="ViewRidgeAssistant" Height="445.762" Width="660.285">
     <Grid>
 
         <Button Name="btnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="10,383,0,0" VerticalAlignment="Top" Width="111" Click="btnAdd_Click"/>
         <DataGrid Name="dgArtists" Height="372" VerticalAlignment="Top" Margin="10,0">
-            
+
         </DataGrid>
         <Button Name="btnRefresh" Content="Обновить" HorizontalAlignment="Left" Margin="136,383,0,0" VerticalAlignment="Top" Width="112" Click="btnRefresh_Click"/>
-        <Button Name="btnDelete" Content="Удалить" HorizontalAlignment="Left" Margin="385,383,0,0" VerticalAlignment="Top" Width="111" Click="btnDelete_Click"/>
-        <Button Name ="btnEdit" Content="Изменить" HorizontalAlignment="Left" Margin="261,383,0,0" VerticalAlignment="Top" Width="111" Click="btnEdit_Click"/>
+        <Button Name="btnDelete" Content="Удалить" HorizontalAlignment="Left" Margin="531,383,0,0" VerticalAlignment="Top" Width="111" Click="btnDelete_Click"/>
+        <Button Name ="btnEdit" Content="Изменить" HorizontalAlignment="Left" Margin="401,383,0,0" VerticalAlignment="Top" Width="111" Click="btnEdit_Click"/>
+        <Button Name="btnDataBase" Content="Подключение" HorizontalAlignment="Left" Margin="271,383,0,0" VerticalAlignment="Top" Width="111" Click="btnDataBase_Click"/>
 
 
     </Grid>

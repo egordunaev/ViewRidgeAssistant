@@ -42,3 +42,33 @@ Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\
 Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\VRA.csproj.CopyComplete
 Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\VRA.exe
 Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\VRA.pdb
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\bin\Debug\VRA.DataAccess.dll
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\bin\Debug\VRA.DataAccess.pdb
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\SettingsWindow.g.cs
+Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA\obj\Debug\SettingsWindow.baml
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\bin\Debug\VRA.exe.config
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\bin\Debug\VRA.exe
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\bin\Debug\VRA.pdb
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.dll
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.dll
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\bin\Debug\VRA.DataAccess.dll
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.pdb
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.pdb
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\bin\Debug\VRA.DataAccess.pdb
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\VRA.csprojAssemblyReference.cache
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddArtistWindow.g.cs
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\MainWindow.g.cs
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\SettingsWindow.g.cs
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\App.g.cs
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\VRA_MarkupCompile.cache
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\VRA_MarkupCompile.lref
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddArtistWindow.baml
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\MainWindow.baml
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\SettingsWindow.baml
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\VRA.g.resources
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\VRA.Properties.Resources.resources
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\VRA.csproj.GenerateResource.cache
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\VRA.csproj.CoreCompileInputs.cache
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\VRA.csproj.CopyComplete
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\VRA.exe
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\VRA.pdb

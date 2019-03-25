@@ -17,7 +17,10 @@ namespace VRA.BusinessLayer
         /// <returns></returns>
         public static IArtistProcess GetArtistProcess()
         {
-            return new ArtistProcess();
+            return new ArtistProcessDb();
+        }        public static ISettingsProcess GetSettingsProcess()
+        {
+            return new SettingsProcess();
         }
     }
 }
