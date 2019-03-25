@@ -18,3 +18,14 @@ Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.
 Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.pdb
 Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.BusinessLayer\bin\Debug\VRA.DataAccess.dll
 Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.BusinessLayer\bin\Debug\VRA.DataAccess.pdb
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.BusinessLayer.dll
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.BusinessLayer.pdb
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.DataAccess.dll
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.Dto.dll
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.DataAccess.pdb
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.Dto.pdb
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.csprojAssemblyReference.cache
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.csproj.CoreCompileInputs.cache
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.csproj.CopyComplete
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.dll
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.pdb
