@@ -4,3 +4,9 @@ Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.
 Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.DataAccess\obj\Debug\VRA.DataAccess.csproj.CoreCompileInputs.cache
 Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.DataAccess\obj\Debug\VRA.DataAccess.dll
 Z:\Klass_310\kurs3\3-42\Dunaev Egor\Управление данными\dev\VRA.DataAccess\obj\Debug\VRA.DataAccess.pdb
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.DataAccess\bin\Debug\VRA.DataAccess.dll
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.DataAccess\bin\Debug\VRA.DataAccess.pdb
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.DataAccess\obj\Debug\VRA.DataAccess.csprojAssemblyReference.cache
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.DataAccess\obj\Debug\VRA.DataAccess.csproj.CoreCompileInputs.cache
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.DataAccess\obj\Debug\VRA.DataAccess.dll
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.DataAccess\obj\Debug\VRA.DataAccess.pdb

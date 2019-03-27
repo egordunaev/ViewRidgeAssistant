@@ -66,7 +66,8 @@ namespace VRA.DataAccess
                     }
                 }
             }
-            return artists;
+            return artists;
+
         }
         /// <summary>
         /// Добавить нового художника
@@ -158,14 +159,15 @@ namespace VRA.DataAccess
             // набора данных
             artist.ArtistId = reader.GetInt32(reader.GetOrdinal("ArtistID"));
             artist.BirthYear = Convert.ToInt32(reader["BirthYear"]);
-            //Помните, что у нас поле DeceaseYear может иметь значение NULL?
-            //Следующие 3 строки корректно обрабатывают этот случай
+            //
+            //
             object decease = reader["DeceaseYear"];
             if (decease != DBNull.Value)
                 artist.DeceaseYear = Convert.ToInt32(decease);
             artist.Name = reader.GetString(reader.GetOrdinal("Name"));
             artist.Nationality = reader.GetString(reader.GetOrdinal("Nationality"));
             return artist;
-        }
+        }
+
     }
 }
