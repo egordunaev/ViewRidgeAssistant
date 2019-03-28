@@ -10,10 +10,10 @@ namespace VRA.DataAccess.Entities
     public class Trans
     {
         public DateTime DateAcquired;
-        public double AcquisitionPrice;
+        public decimal AcquisitionPrice;
         public DateTime PurchaseDate;
-        public double SalesPrice;
-        public double AskingPrice;
+        public decimal SalesPrice;
+        public decimal AskingPrice;
         public int TransactionID;
         public int CustomerID;
         public int WorkID;

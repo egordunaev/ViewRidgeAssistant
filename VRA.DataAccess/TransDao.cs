@@ -12,9 +12,9 @@ namespace VRA.DataAccess
     public class TransDao : ITransDao
     {
         /// <summary>
-        /// Получить определенного художника
+        /// Получить определенную транзакцию
         /// </summary>
-        /// <param name="id">Номер художника</param>
+        /// <param name="id">Номер транзакции</param>
         /// <returns></returns>
         public Trans Get(int id)
         {
@@ -45,7 +45,7 @@ namespace VRA.DataAccess
             }
         }
         /// <summary>
-        /// Получить всех художников.
+        /// Получить все транзакции
         /// </summary>
         /// <returns></returns>
         public IList<Trans> GetAll()
@@ -70,9 +70,9 @@ namespace VRA.DataAccess
 
         }
         /// <summary>
-        /// Добавить нового художника
+        /// Добавить новую транзакцию
         /// </summary>
-        /// <param name="trans">Художник</param>
+        /// <param name="trans">транзакция</param>
         public void Add(Trans trans)
         {
             using (var conn = GetConnection())
@@ -94,9 +94,9 @@ namespace VRA.DataAccess
             }
         }
         /// <summary>
-        /// Обновить информацию о художнике
+        /// Обновить информацию о транзакции
         /// </summary>
-        /// <param name="trans">Художник</param>
+        /// <param name="trans">транзакция</param>
         public void Update(Trans trans)
         {
             using (var conn = GetConnection())
@@ -119,9 +119,9 @@ namespace VRA.DataAccess
             }
         }
         /// <summary>
-        /// Удалить художника
+        /// Удалить транзакцию
         /// </summary>
-        /// <param name="id">Номер художника</param>
+        /// <param name="id">Номер транзакции</param>
         public void Delete(int id)
         {
             using (var conn = GetConnection())
@@ -152,7 +152,7 @@ namespace VRA.DataAccess
             return new SqlConnection(GetConnectionString());
         }
         /// <summary>
-        /// Загрузка художника
+        /// Загрузка транзакции
         /// </summary>
         /// <param name="reader"></param>
         /// <returns></returns>
@@ -163,8 +163,14 @@ namespace VRA.DataAccess
             //Заполняем поля объекта в соответствии с названиями полей результирующего
             // набора данных
             trans.TransactionID = reader.GetInt32(reader.GetOrdinal("TransactionID"));
-            
-                // добавить столбцы таблицы TRANS!!!
+            trans.AcquisitionPrice = reader.GetDecimal(reader.GetOrdinal("AcquisitionPrice"));
+            trans.SalesPrice = reader.GetDecimal(reader.GetOrdinal("SalesPrice"));
+            trans.AskingPrice = reader.GetDecimal(reader.GetOrdinal("AskingPrice"));
+            trans.DateAcquired = reader.GetDateTime(reader.GetOrdinal("DateAcquired"));
+            trans.PurchaseDate = reader.GetDateTime(reader.GetOrdinal("PurchaseDate"));
+            trans.WorkID = reader.GetInt32(reader.GetOrdinal("WorkID"));
+            trans.CustomerID = reader.GetInt32(reader.GetOrdinal("CustomerID"));
+            // добавить столбцы таблицы TRANS!!!
             /*artist.ArtistId = reader.GetInt32(reader.GetOrdinal("ArtistID"));
             artist.BirthYear = Convert.ToInt32(reader["BirthYear"]);
             
