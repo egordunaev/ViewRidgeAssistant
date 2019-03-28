@@ -10,3 +10,9 @@ D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.DataAcc
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.DataAccess\obj\Debug\VRA.DataAccess.csproj.CoreCompileInputs.cache
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.DataAccess\obj\Debug\VRA.DataAccess.dll
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.DataAccess\obj\Debug\VRA.DataAccess.pdb
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.DataAccess\bin\Debug\VRA.DataAccess.dll
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.DataAccess\bin\Debug\VRA.DataAccess.pdb
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.DataAccess\obj\Debug\VRA.DataAccess.csprojResolveAssemblyReference.cache
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.DataAccess\obj\Debug\VRA.DataAccess.csproj.CoreCompileInputs.cache
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.DataAccess\obj\Debug\VRA.DataAccess.dll
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.DataAccess\obj\Debug\VRA.DataAccess.pdb

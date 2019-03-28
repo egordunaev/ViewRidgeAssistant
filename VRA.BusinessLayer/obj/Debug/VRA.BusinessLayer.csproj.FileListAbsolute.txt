@@ -29,3 +29,14 @@ D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.Busines
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.csproj.CopyComplete
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.dll
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.pdb
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.BusinessLayer.dll
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.BusinessLayer.pdb
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.DataAccess.dll
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.Dto.dll
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.DataAccess.pdb
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.Dto.pdb
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.csprojResolveAssemblyReference.cache
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.csproj.CoreCompileInputs.cache
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.csproj.CopyComplete
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.dll
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.pdb

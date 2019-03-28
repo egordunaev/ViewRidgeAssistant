@@ -14,30 +14,32 @@ namespace VRA.DataAccess
     public interface ICustomerArtistIntDao
     {
         /// <summary>
-        /// Получить 
+        /// Получить интерес
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="ArtistID">номер художника</param>
+        /// <param name="CustomerID">номер клиента</param>
         /// <returns></returns>
-        CustomerArtistInt Get(int id);
+        CustomerArtistInt Get(int ArtistID,int CustomerID);
         /// <summary>
-        /// 
+        /// Получить все интересы
         /// </summary>
         /// <returns></returns>
         IList<CustomerArtistInt> GetAll();
         /// <summary>
-        /// 
+        /// Добавить интерес
         /// </summary>
         /// <param name="customerArtistInt"></param>
         void Add(CustomerArtistInt customerArtistInt);
         /// <summary>
-        /// 
+        /// Обновить интерес
         /// </summary>
         /// <param name="customerArtistInt"></param>
         void Update(CustomerArtistInt customerArtistInt);
         /// <summary>
-        /// 
+        /// Удалить интерес
         /// </summary>
-        /// <param name="id"></param>
-        void Delete(int id);
+        /// <param name="ArtistID">Artist id</param>
+        /// <param name="CustomerID">Customer id</param>
+        void Delete(int ArtistID,int CustomerID);
     }
 }

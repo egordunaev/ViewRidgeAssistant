@@ -106,7 +106,8 @@ namespace VRA.DataAccess
                 conn.Open();
                 using (var cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE CUSTOMER SET Name=@Name, Email=@Email, AreaCode=@AreaCode, HouseNumber=@HouseNumber, Street=@Street, City=@City, Region=@Region, ZipPostalCode=@ZipPostalCode, Country=@Country, PhoneNumber=@PhoneNumber WHERE CustomerID = @ID";
+                    cmd.CommandText = "UPDATE CUSTOMER SET Name=@Name, Email=@Email, AreaCode=@AreaCode, HouseNumber=@HouseNumber, Street=@Street, City=@City, Region=@Region, ZipPostalCode=@ZipPostalCode, Country=@Country, PhoneNumber=@PhoneNumber WHERE CustomerID = @CustomerID";
+                    cmd.Parameters.AddWithValue("@CustomerID", customer.CustomerID);
                     cmd.Parameters.AddWithValue("@Name", customer.Name);
                     cmd.Parameters.AddWithValue("@Email", customer.Email);
                     cmd.Parameters.AddWithValue("@AreaCode", customer.AreaCode);

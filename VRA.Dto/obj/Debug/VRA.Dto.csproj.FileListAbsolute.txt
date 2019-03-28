@@ -16,3 +16,9 @@ D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.Dto\obj
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.csproj.CoreCompileInputs.cache
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.dll
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.pdb
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.Dto\bin\Debug\VRA.Dto.dll
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.Dto\bin\Debug\VRA.Dto.pdb
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.csprojResolveAssemblyReference.cache
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.csproj.CoreCompileInputs.cache
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.dll
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.pdb
