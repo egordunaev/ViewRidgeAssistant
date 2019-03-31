@@ -89,5 +89,15 @@ namespace VRA
             SettingsWindow window = new SettingsWindow();
             window.ShowDialog();
         }
+
+        private void btn_DataBase_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnArtists_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
