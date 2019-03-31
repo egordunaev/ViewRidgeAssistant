@@ -18,15 +18,12 @@
         <Button Name="btnDataBase" Content="Подключение" HorizontalAlignment="Left" Margin="271,383,0,0" VerticalAlignment="Top" Width="111" Click="btnDataBase_Click"/>
         <Menu Height="25" HorizontalAlignment="Stretch" Name="mainMenu" VerticalAlignment="Top" Grid.ColumnSpan="3">
             <MenuItem Name="DataBase" Header="База данных">
-                <MenuItem Name="dataBaseS" Header="Настроить соединение с базой данных">
-                    <MenuItem Name="Reports" Header="Отчеты">
-                        <MenuItem Name="ExcelExporterButton" Header="Экспорт таблицы Excel"/>
-                    </MenuItem>
-                    <MenuItem Name="About" Header="О программе"></MenuItem>
-                </MenuItem>
+                <MenuItem Name="dataBaseS" Header="Настроить соединение с базой данных"></MenuItem>
             </MenuItem>
+            <MenuItem Name="Reports" Header="Отчеты">
+                <MenuItem Name="ExcelExporterButton" Header="Экспорт таблицы Excel"/>
+            </MenuItem>
+            <MenuItem Name="About" Header="О программе"></MenuItem>
         </Menu>
-
-
     </Grid>
 </Window>
