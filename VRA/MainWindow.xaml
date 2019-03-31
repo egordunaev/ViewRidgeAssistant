@@ -8,14 +8,24 @@
         Title="ViewRidgeAssistant" Height="445.762" Width="660.285">
     <Grid>
 
-        <Button Name="btnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="10,383,0,0" VerticalAlignment="Top" Width="111" Click="btnAdd_Click"/>
-        <DataGrid Name="dgArtists" Height="372" VerticalAlignment="Top" Margin="10,0">
+        <Button Name="btnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="582,31,0,0" VerticalAlignment="Top" Width="60" Click="btnAdd_Click" Height="50"/>
+        <DataGrid Name="dgArtists" Height="341" VerticalAlignment="Top" Margin="75,31,75,0">
 
         </DataGrid>
-        <Button Name="btnRefresh" Content="Обновить" HorizontalAlignment="Left" Margin="136,383,0,0" VerticalAlignment="Top" Width="112" Click="btnRefresh_Click"/>
-        <Button Name="btnDelete" Content="Удалить" HorizontalAlignment="Left" Margin="531,383,0,0" VerticalAlignment="Top" Width="111" Click="btnDelete_Click"/>
-        <Button Name ="btnEdit" Content="Изменить" HorizontalAlignment="Left" Margin="401,383,0,0" VerticalAlignment="Top" Width="111" Click="btnEdit_Click"/>
+        <Button Name="btnRefresh" Content="Обновить" HorizontalAlignment="Left" Margin="582,196,0,0" VerticalAlignment="Top" Width="60" Click="btnRefresh_Click" Height="49"/>
+        <Button Name="btnDelete" Content="Удалить" HorizontalAlignment="Left" Margin="582,141,0,0" VerticalAlignment="Top" Width="60" Click="btnDelete_Click" Height="50"/>
+        <Button Name ="btnEdit" Content="Изменить" HorizontalAlignment="Left" Margin="582,86,0,0" VerticalAlignment="Top" Width="60" Click="btnEdit_Click" Height="50"/>
         <Button Name="btnDataBase" Content="Подключение" HorizontalAlignment="Left" Margin="271,383,0,0" VerticalAlignment="Top" Width="111" Click="btnDataBase_Click"/>
+        <Menu Height="25" HorizontalAlignment="Stretch" Name="mainMenu" VerticalAlignment="Top" Grid.ColumnSpan="3">
+            <MenuItem Name="DataBase" Header="База данных">
+                <MenuItem Name="dataBaseS" Header="Настроить соединение с базой данных">
+                    <MenuItem Name="Reports" Header="Отчеты">
+                        <MenuItem Name="ExcelExporterButton" Header="Экспорт таблицы Excel"/>
+                    </MenuItem>
+                    <MenuItem Name="About" Header="О программе"></MenuItem>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
 
 
     </Grid>

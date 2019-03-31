@@ -44,11 +44,23 @@
     <Compile Include="ArtistProcess.cs" />
     <Compile Include="ArtistProcessDb.cs" />
     <Compile Include="Converters\DtoConverter.cs" />
+    <Compile Include="CustomerArtistIntDb.cs" />
+    <Compile Include="CustomerArtistIntProcess.cs" />
+    <Compile Include="CustomerProcess.cs" />
+    <Compile Include="CustomerProcessDb.cs" />
     <Compile Include="IArtistProcess.cs" />
+    <Compile Include="ICustomerArtistIntProcess.cs" />
+    <Compile Include="ICustomerProcess.cs" />
     <Compile Include="ISettingsProcess.cs" />
+    <Compile Include="ITransProcess.cs" />
+    <Compile Include="IWorkProcess.cs" />
     <Compile Include="ProcessFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingsProcess.cs" />
+    <Compile Include="TransProcessDb.cs" />
+    <Compile Include="TransProcess.cs" />
+    <Compile Include="WorkProcess.cs" />
+    <Compile Include="WorkProcessDb.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VRA.DataAccess\VRA.DataAccess.csproj">

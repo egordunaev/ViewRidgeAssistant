@@ -10,6 +10,9 @@ namespace VRA.BusinessLayer.Converters
 {
     public class DtoConverter
     {
+        //
+        // ARTIST
+        //
         public static ArtistDto Convert(Artist artist)
         {
             if (artist == null)
@@ -44,6 +47,171 @@ namespace VRA.BusinessLayer.Converters
                 artistDtos.Add(Convert(artist));
             }
             return artistDtos;
-        }
+        }
+        //
+        // CUSTOMER
+        //
+        public static CustomerDto Convert(Customer customer)
+        {
+            if (customer == null)
+                return null;
+            CustomerDto customerDto = new CustomerDto();
+            customerDto.CustomerID = customer.CustomerID;
+            customerDto.Email = customer.Email;
+            customerDto.Name = customer.Name;
+            customerDto.AreaCode = customer.AreaCode;
+            customerDto.HouseNumber = customer.HouseNumber;
+            customerDto.Street = customer.Street;
+            customerDto.City = customer.City;
+            customerDto.Region = customer.Region;
+            customerDto.ZipPostalCode = customer.ZipPostalCode;
+            customerDto.Country = customer.Country;
+            customerDto.PhoneNumber = customer.PhoneNumber;
+            return customerDto;
+        }
+        public static Customer Convert(CustomerDto customerDto)
+        {
+            if (customerDto == null)
+                return null;
+            Customer customer = new Customer();
+            customer.CustomerID = customerDto.CustomerID;
+            customer.Email = customerDto.Email;
+            customer.Name = customerDto.Name;
+            customer.AreaCode = customerDto.AreaCode;
+            customer.HouseNumber = customerDto.HouseNumber;
+            customer.Street = customerDto.Street;
+            customer.City = customerDto.City;
+            customer.Region = customerDto.Region;
+            customer.ZipPostalCode = customerDto.ZipPostalCode;
+            customer.Country = customerDto.Country;
+            customer.PhoneNumber = customerDto.PhoneNumber;
+            return customer;
+        }
+        public static IList<CustomerDto> Convert(IList<Customer> customers)
+        {
+            if (customers == null)
+                return null;
+            IList<CustomerDto> customerDtos = new List<CustomerDto>();
+            foreach (var customer in customers)
+            {
+                customerDtos.Add(Convert(customer));
+            }
+            return customerDtos;
+        }
+        //
+        // TRANS
+        //
+        public static TransDto Convert(Trans trans)
+        {
+            if (trans == null)
+                return null;
+            TransDto transDto = new TransDto();
+            transDto.TransactionID = trans.TransactionID;
+            transDto.CustomerID = trans.CustomerID;
+            transDto.DateAcquired = trans.DateAcquired;
+            transDto.AcquisitionPrice = trans.AcquisitionPrice;
+            transDto.PurchaseDate = trans.PurchaseDate;
+            transDto.SalesPrice = trans.SalesPrice;
+            transDto.AskingPrice = trans.AskingPrice;
+            transDto.WorkID = trans.WorkID;
+            return transDto;
+        }
+        public static Trans Convert(TransDto transDto)
+        {
+            if (transDto == null)
+                return null;
+            Trans trans = new Trans();
+            trans.TransactionID = transDto.TransactionID;
+            trans.CustomerID = transDto.CustomerID;
+            trans.DateAcquired = transDto.DateAcquired;
+            trans.AcquisitionPrice = transDto.AcquisitionPrice;
+            trans.PurchaseDate = transDto.PurchaseDate;
+            trans.SalesPrice = transDto.SalesPrice;
+            trans.AskingPrice = transDto.AskingPrice;
+            trans.WorkID = transDto.WorkID;
+            return trans;
+
+        }
+        public static IList<TransDto> Convert(IList<Trans> transactions)
+        {
+            if (transactions == null)
+                return null;
+            IList<TransDto> transDtos = new List<TransDto>();
+            foreach (var trans in transactions)
+            {
+                transDtos.Add(Convert(trans));
+            }
+            return transDtos;
+        }
+        //
+        // WORK
+        //
+        public static WorkDto Convert(Work work)
+        {
+            if (work == null)
+                return null;
+            WorkDto workDto = new WorkDto();
+            workDto.WorkID = work.WorkID;
+            workDto.ArtistID = work.ArtistID;
+            workDto.Title = work.Title;
+            workDto.Copy = work.Copy;
+            workDto.Description = work.Description;
+            return workDto;
+        }
+        public static Work Convert(WorkDto workDto)
+        {
+            if (workDto == null)
+                return null;
+            Work work = new Work();
+            work.WorkID = workDto.WorkID;
+            work.ArtistID = workDto.ArtistID;
+            work.Title = workDto.Title;
+            work.Copy = workDto.Copy;
+            work.Description = workDto.Description;
+            return work;
+        }
+        public static IList<WorkDto> Convert(IList<Work> works)
+        {
+            if (works == null)
+                return null;
+            IList<WorkDto> workDtos = new List<WorkDto>();
+            foreach (var work in works)
+            {
+                workDtos.Add(Convert(work));
+            }
+            return workDtos;
+        }
+        //
+        // CUSTOMER_ARTIST_INT
+        //
+        public static CustomerArtistIntDto Convert(CustomerArtistInt customerArtistInt)
+        {
+            if (customerArtistInt == null)
+                return null;
+            CustomerArtistIntDto customerArtistIntDto = new CustomerArtistIntDto();
+            customerArtistIntDto.CustomerID = customerArtistInt.CustomerID;
+            customerArtistIntDto.ArtistID = customerArtistInt.ArtistID;
+            return customerArtistIntDto;
+        }
+        public static CustomerArtistInt Convert(CustomerArtistIntDto customerArtistIntDto)
+        {
+            if (customerArtistIntDto == null)
+                return null;
+            CustomerArtistInt customerArtistInt = new CustomerArtistInt();
+            customerArtistInt.CustomerID = customerArtistIntDto.CustomerID;
+            customerArtistInt.ArtistID = customerArtistIntDto.ArtistID;
+            return customerArtistInt;
+        }
+        public static IList<CustomerArtistIntDto> Convert(IList<CustomerArtistInt> customerArtistInts)
+        {
+            if (customerArtistInts == null)
+                return null;
+            IList<CustomerArtistIntDto> customerArtistIntDtos = new List<CustomerArtistIntDto>();
+            foreach(var customerartistInt in customerArtistInts)
+            {
+                customerArtistIntDtos.Add(Convert(customerartistInt));
+            }
+            return customerArtistIntDtos;
+        }
     }
 }

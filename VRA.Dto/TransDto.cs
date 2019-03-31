@@ -18,7 +18,7 @@ namespace VRA.Dto
         /// <summary>
         /// Цена покупки
         /// </summary>
-        public double AcquisitionPrice { get; set; }
+        public decimal AcquisitionPrice { get; set; }
         /// <summary>
         /// Дата покупки картины
         /// </summary>
@@ -26,11 +26,11 @@ namespace VRA.Dto
         /// <summary>
         /// Цена покупки картины
         /// </summary>
-        public double SalesPrice { get; set; }
+        public decimal SalesPrice { get; set; }
         /// <summary>
         /// Цена картины
         /// </summary>
-        public double AskingPrice { get; set; }
+        public decimal AskingPrice { get; set; }
         /// <summary>
         /// Номер транзакции
         /// </summary>
