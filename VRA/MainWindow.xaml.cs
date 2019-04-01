@@ -22,6 +22,7 @@ namespace VRA
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string status; //Устанавливает, с какой таблицей в текущий момент работает пользователь
         public MainWindow()
         {
             InitializeComponent();
@@ -97,7 +98,31 @@ namespace VRA
 
         private void btnArtists_Click(object sender, RoutedEventArgs e)
         {
-
+            switch (status)
+            {
+                case "Customer": this.dgCustomers.Visibility = Visibility.Hidden;
+                    break;
+                case "Work": this.dgWork.Visibility = Visibility.Hidden;
+                    break;
+                case "Trans": this.dgTrans.Visibility = Visibility.Hidden;
+                    break;
+                case "Interests": this.dgInterests.Visibility = Visibility.Hidden;
+                    break;
+                case "Nations": this.dgNations.Visibility = Visibility.Hidden;
+                    break;
+            }
+            this.dgArtists.Visibility = Visibility.Visible;//отображаем DateGrid художников
+            status = "Artist";//устанавливаем таблицу, с которой работаем в данный момент
+            this.btnRefresh_Click(sender, e);//загружаем данные в DateGrid
+            this.statusLabel.Content = "Работа с таблицей: Художники";
+            //устанавливаем видимость кнопок управления записями таблицы
+            this.btnAdd.Visibility = Visibility.Visible;
+            this.btnPurchase.Visibility = Visibility.Collapsed;
+            this.btnSale.Visibility = Visibility.Collapsed;
+            this.btnEdit.Visibility = Visibility.Visible;
+            this.btnDelete.Visibility = Visibility.Visible;
+            this.btnRefresh.Visibility = Visibility.Visible;
+            this.btnSearch.Visibility = Visibility.Visible;
         }
 
         private void btnCustomers_Click(object sender, RoutedEventArgs e)

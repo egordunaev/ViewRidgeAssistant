@@ -5,14 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VRA"
         mc:Ignorable="d"
-        Title="ViewRidgeAssistant" Height="445.762" Width="672.285">
+        Title="ViewRidgeAssistant" Height="550.762" Width="672.285">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="87*"/>
+            <RowDefinition Height="80*"/>
             <RowDefinition Height="55*"/>
             <RowDefinition Height="56*"/>
-            <RowDefinition Height="54*"/>
-            <RowDefinition Height="163*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="96*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="41*"/>
@@ -20,12 +23,22 @@
             <ColumnDefinition Width="38*"/>
         </Grid.ColumnDefinitions>
 
-        <Button Name="btnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="6,35,0,0" VerticalAlignment="Top" Width="60" Click="btnAdd_Click" Height="50" Grid.Column="2"/>
-        <DataGrid Name="dgArtists" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Visible" Grid.RowSpan="5" Grid.Column="1"/>
+        <Button Name="btnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="6,25,0,0" VerticalAlignment="Top" Width="60" Click="btnAdd_Click" Height="50" Grid.Column="2"/>
+        <DataGrid Name="dgArtists" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
+        <DataGrid Name="dgCustomers" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
+        <DataGrid Name="dgWork" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
+        <DataGrid Name="dgTrans" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
+        <DataGrid Name="dgInterests" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
+        <DataGrid Name="dgNations" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
         <Button Name="btnRefresh" Content="Обновить" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Top" Width="60" Click="btnRefresh_Click" Height="49" Grid.Column="2" Grid.Row="3"/>
         <Button Name="btnDelete" Content="Удалить" HorizontalAlignment="Left" Margin="6,1,0,0" VerticalAlignment="Top" Width="60" Click="btnDelete_Click" Height="50" Grid.Column="2" Grid.Row="2"/>
         <Button Name ="btnEdit" Content="Изменить" HorizontalAlignment="Left" Margin="6,6,0,0" VerticalAlignment="Top" Width="60" Click="btnEdit_Click" Height="50" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"/>
-        <Button Name="btnDataBase" Content="Подключение" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Top" Width="60" Click="btnDataBase_Click" Height="52" Grid.Column="2" Grid.Row="4"/>
+        <Button FontSize="8" Name="btnDataBase" Content="Подключение" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Top" Width="60" Click="btnDataBase_Click" Height="52" Grid.Column="2" Grid.Row="4"/>
+        <Button FontSize="8" Name="btnPurchase" Content="Покупки" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Top" Width="60"  Height="52" Grid.Column="2" Grid.Row="5"/>
+        <Button FontSize="8" Name="btnSearch" Content="Поиск" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Top" Width="60"  Height="52" Grid.Column="2" Grid.Row="6"/>
+        <Button FontSize="8" Name="btnSale" Content="Продажи" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Top" Width="60"  Height="52" Grid.Column="2" Grid.Row="7"/>
+
+
         <Menu Height="25" HorizontalAlignment="Stretch" Name="mainMenu" VerticalAlignment="Top" Grid.ColumnSpan="3">
             <MenuItem Name="DataBase" Header="База данных">
                 <MenuItem Name="dataBaseS" Header="Настроить соединение с базой данных" Click="btn_DataBase_Click"></MenuItem>
@@ -35,7 +48,7 @@
             </MenuItem>
             <MenuItem Name="About" Header="О программе"></MenuItem>
         </Menu>
-        <StatusBar Name="statusBar" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Margin="1,0" VerticalAlignment="Bottom" Height="30" Grid.Row="4">
+        <StatusBar Name="statusBar" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Margin="1,0" VerticalAlignment="Bottom" Height="30" Grid.Row="7">
             <Label Name="statusLabel" Content="Работа с таблицей:" Visibility="Visible"></Label>
         </StatusBar>
         <StackPanel Grid.Column="0" Orientation="Vertical" Grid.ColumnSpan="1" Grid.RowSpan="1" VerticalAlignment="Bottom" Height="52">
