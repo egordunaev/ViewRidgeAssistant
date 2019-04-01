@@ -99,5 +99,20 @@ namespace VRA
         {
 
         }
+
+        private void btnCustomers_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnWork_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnTrans_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

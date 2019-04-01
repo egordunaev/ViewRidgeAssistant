@@ -21,6 +21,21 @@ namespace VRA.BusinessLayer
         }        public static ISettingsProcess GetSettingsProcess()
         {
             return new SettingsProcess();
-        }
+        }        public static ICustomerProcess GetCustomerProcess()
+        {
+            return new CustomerProcess();
+        }
+        public static ICustomerArtistIntProcess GetCustomerArtistIntProcess()
+        {
+            return new CustomerArtistIntProcess();
+        }
+        public static IWorkProcess GetWorkProcess()
+        {
+            return new WorkProcess();
+        }
+        public static ITransProcess GetTransProcess()
+        {
+            return new TransProcess();
+        }
     }
 }
