@@ -131,7 +131,36 @@ namespace VRA
 
         private void btnCustomers_Click(object sender, RoutedEventArgs e)
         {
-
+            switch (status)
+            {
+                case "Artist":
+                    this.dgArtists.Visibility = Visibility.Hidden;
+                    break;
+                case "Work":
+                    this.dgWork.Visibility = Visibility.Hidden;
+                    break;
+                case "Trans":
+                    this.dgTrans.Visibility = Visibility.Hidden;
+                    break;
+                case "Interests":
+                    this.dgInterests.Visibility = Visibility.Hidden;
+                    break;
+                case "Nations":
+                    this.dgNations.Visibility = Visibility.Hidden;
+                    break;
+            }
+            this.dgCustomers.Visibility = Visibility.Visible;//отображаем DateGrid художников
+            status = "Customer";//устанавливаем таблицу, с которой работаем в данный момент
+            this.btnRefresh_Click(sender, e);//загружаем данные в DateGrid
+            this.statusLabel.Content = "Работа с таблицей: Художники";
+            //устанавливаем видимость кнопок управления записями таблицы
+            this.btnAdd.Visibility = Visibility.Visible;
+            this.btnPurchase.Visibility = Visibility.Collapsed;
+            this.btnSale.Visibility = Visibility.Collapsed;
+            this.btnEdit.Visibility = Visibility.Visible;
+            this.btnDelete.Visibility = Visibility.Visible;
+            this.btnRefresh.Visibility = Visibility.Visible;
+            this.btnSearch.Visibility = Visibility.Visible;
         }
 
         private void btnWork_Click(object sender, RoutedEventArgs e)

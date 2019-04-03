@@ -98,3 +98,9 @@ D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA\obj\Debug\VRA.csproj.CoreCompil
 D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA\obj\Debug\VRA.csproj.CopyComplete
 D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA\obj\Debug\VRA.exe
 D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA\obj\Debug\VRA.pdb
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerWindow.g.cs
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddTransWindow.g.cs
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddWorkWindow.g.cs
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerWindow.baml
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddTransWindow.baml
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddWorkWindow.baml

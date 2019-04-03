@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\App.xaml
-3306469597
+61679849287
 
-11-950128413
+102029093412
 15612514988
-AddArtistWindow.xaml;MainWindow.xaml;SettingsWindow.xaml;
+AddArtistWindow.xaml;AddCustomerWindow.xaml;AddTransWindow.xaml;AddWorkWindow.xaml;MainWindow.xaml;SettingsWindow.xaml;
 
-True
+False
 
