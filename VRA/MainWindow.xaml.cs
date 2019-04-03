@@ -39,8 +39,12 @@ namespace VRA
 
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
-            //Получаем список художников и передаем его на отображение таблице
+            //Получаем список  и передаем его на отображение таблице
             dgArtists.ItemsSource = ProcessFactory.GetArtistProcess().GetList();
+            dgCustomers.ItemsSource = ProcessFactory.GetCustomerProcess().GetList();
+            dgTrans.ItemsSource = ProcessFactory.GetTransProcess().GetList();
+            dgWork.ItemsSource = ProcessFactory.GetWorkProcess().GetList();
+            dgInterests.ItemsSource = ProcessFactory.GetCustomerArtistIntProcess().GetList();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
