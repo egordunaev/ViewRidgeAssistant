@@ -23,7 +23,7 @@ namespace VRA.BusinessLayer
             return new SettingsProcess();
         }        public static ICustomerProcess GetCustomerProcess()
         {
-            return new CustomerProcess();
+            return new CustomerProcessDb();
         }
         public static ICustomerArtistIntProcess GetCustomerArtistIntProcess()
         {
@@ -31,11 +31,11 @@ namespace VRA.BusinessLayer
         }
         public static IWorkProcess GetWorkProcess()
         {
-            return new WorkProcess();
+            return new WorkProcessDb();
         }
         public static ITransProcess GetTransProcess()
         {
-            return new TransProcess();
+            return new TransProcessDb();
         }
     }
 }

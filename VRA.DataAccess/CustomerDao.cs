@@ -84,7 +84,9 @@ namespace VRA.DataAccess
                     cmd.Parameters.AddWithValue("@Name", customer.Name);
                     cmd.Parameters.AddWithValue("@Email", customer.Email);
                     cmd.Parameters.AddWithValue("@AreaCode", customer.AreaCode);
-                    cmd.Parameters.AddWithValue("@HouseNumber", customer.HouseNumber);
+                    object housenumber = (string.IsNullOrEmpty(customer.HouseNumber)) ? (object)customer.HouseNumber.ToString() : DBNull.Value;
+                    cmd.Parameters.AddWithValue("@HouseNumber", housenumber);
+                    //cmd.Parameters.AddWithValue("@HouseNumber", customer.HouseNumber);
                     cmd.Parameters.AddWithValue("@Street", customer.Street);
                     cmd.Parameters.AddWithValue("@City", customer.City);
                     cmd.Parameters.AddWithValue("@Region", customer.Region);
@@ -170,7 +172,10 @@ namespace VRA.DataAccess
             customer.Name = reader.GetString(reader.GetOrdinal("Name"));
             customer.Email = reader.GetString(reader.GetOrdinal("Email"));
             customer.AreaCode = reader.GetString(reader.GetOrdinal("AreaCode"));
-            customer.HouseNumber = reader.GetString(reader.GetOrdinal("HouseNumber"));
+            object housenumber = reader["HouseNumber"];
+            if (housenumber != DBNull.Value)
+                customer.HouseNumber = Convert.ToString(housenumber);
+            //customer.HouseNumber = reader.GetString(reader.GetOrdinal("HouseNumber"));
             customer.Street = reader.GetString(reader.GetOrdinal("Street"));
             customer.City = reader.GetString(reader.GetOrdinal("City"));
             customer.Region = reader.GetString(reader.GetOrdinal("Region"));

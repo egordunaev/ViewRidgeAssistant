@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VRA.Dto;
+using VRA.BusinessLayer;
 
 namespace VRA
 {
@@ -19,6 +21,21 @@ namespace VRA
     /// </summary>
     public partial class AddCustomerWindow : Window
     {
+        private int _customerid;
+        public void Load(CustomerDto customer)
+        {
+            _customerid = customer.CustomerID;
+            tbAreaCode.Text = customer.AreaCode;
+            tbCity.Text = customer.City;
+            tbCountry.Text = customer.Country;
+            tbEmail.Text = customer.Email;
+            tbHouseNumber.Text = customer.HouseNumber;
+            tbName.Text = customer.Name;
+            tbPhoneNumber.Text = customer.PhoneNumber;
+            tbRegion.Text = customer.Region;
+            tbStreet.Text = customer.Street;
+            tbZipPostalCode.Text = customer.ZipPostalCode;
+        }
         public AddCustomerWindow()
         {
             InitializeComponent();
@@ -76,6 +93,28 @@ namespace VRA
                 MessageBox.Show("Номер телефона не должен быть пустым", "Проверка");
                 return;
             }
+            CustomerDto customer = new CustomerDto();
+            customer.AreaCode = tbAreaCode.Text;
+            customer.City = tbCity.Text;
+            customer.Country = tbCountry.Text;
+            customer.Email = tbEmail.Text;
+            customer.HouseNumber = tbHouseNumber.Text;
+            customer.Name = tbName.Text;
+            customer.PhoneNumber = tbPhoneNumber.Text;
+            customer.Region = tbRegion.Text;
+            customer.Street = tbStreet.Text;
+            customer.ZipPostalCode = tbZipPostalCode.Text;
+            ICustomerProcess customerProcess = ProcessFactory.GetCustomerProcess();
+            if (_customerid==0)
+            {
+                customerProcess.Add(customer);
+            }
+            else
+            {
+                customer.CustomerID = _customerid;
+                customerProcess.Update(customer);
+            }
+            Close();
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)

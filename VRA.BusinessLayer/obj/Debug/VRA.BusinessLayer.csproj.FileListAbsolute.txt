@@ -40,3 +40,14 @@ D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.Bus
 D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.csproj.CopyComplete
 D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.dll
 D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.pdb
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.BusinessLayer.dll
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.BusinessLayer.pdb
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.DataAccess.dll
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.Dto.dll
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.DataAccess.pdb
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\VRA.Dto.pdb
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.csprojAssemblyReference.cache
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.csproj.CopyComplete
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.dll
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.pdb

@@ -21,3 +21,9 @@ D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.csprojRes
 D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.csproj.CoreCompileInputs.cache
 D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.dll
 D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.pdb
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.Dto\bin\Debug\VRA.Dto.dll
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.Dto\bin\Debug\VRA.Dto.pdb
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.csprojAssemblyReference.cache
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.csproj.CoreCompileInputs.cache
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.dll
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.Dto\obj\Debug\VRA.Dto.pdb

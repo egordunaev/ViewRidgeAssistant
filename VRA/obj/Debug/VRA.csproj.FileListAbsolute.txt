@@ -104,3 +104,35 @@ D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Deb
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerWindow.baml
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddTransWindow.baml
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddWorkWindow.baml
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\bin\Debug\VRA.exe.config
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\bin\Debug\VRA.exe
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\bin\Debug\VRA.pdb
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.dll
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.dll
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\bin\Debug\VRA.DataAccess.dll
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.pdb
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.pdb
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\bin\Debug\VRA.DataAccess.pdb
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\VRA.csprojAssemblyReference.cache
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\AddArtistWindow.g.cs
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerWindow.g.cs
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\AddTransWindow.g.cs
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\AddWorkWindow.g.cs
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\MainWindow.g.cs
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\SettingsWindow.g.cs
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\App.g.cs
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\VRA_MarkupCompile.cache
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\VRA_MarkupCompile.lref
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\AddArtistWindow.baml
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerWindow.baml
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\AddTransWindow.baml
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\AddWorkWindow.baml
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\MainWindow.baml
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\SettingsWindow.baml
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\VRA.g.resources
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\VRA.Properties.Resources.resources
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\VRA.csproj.GenerateResource.cache
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\VRA.csproj.CoreCompileInputs.cache
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\VRA.csproj.CopyComplete
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\VRA.exe
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\VRA.pdb
