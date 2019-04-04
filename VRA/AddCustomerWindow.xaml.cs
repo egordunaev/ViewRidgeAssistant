@@ -58,11 +58,6 @@ namespace VRA
                 MessageBox.Show("Код области не должен быть пустым", "Проверка");
                 return;
             }
-            if (string.IsNullOrEmpty(tbHouseNumber.Text))
-            {
-                MessageBox.Show("Номер дома не должен быть пустым", "Проверка");
-                return;
-            }
             if (string.IsNullOrEmpty(tbStreet.Text))
             {
                 MessageBox.Show("Улица не должна быть пустой", "Проверка");
