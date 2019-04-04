@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VRA.Dto;
+using VRA.BusinessLayer;
 
 namespace VRA
 {
@@ -19,6 +21,16 @@ namespace VRA
     /// </summary>
     public partial class AddTransWindow : Window
     {
+        private int _transactionid;
+        public void Load(TransDto trans)
+        {
+            _transactionid = trans.TransactionID;
+            tbAcquisitionPrice.Text = trans.AcquisitionPrice.ToString();
+            tbAskingPrice.Text = trans.AskingPrice.ToString();
+            tbCustomerID.Text = trans.CustomerID.ToString();
+            tbSalesPrice.Text = trans.SalesPrice.ToString();
+            //Даты сделать позже.
+        }
         public AddTransWindow()
         {
             InitializeComponent();
@@ -26,12 +38,32 @@ namespace VRA
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-
+            if(string.IsNullOrEmpty(tbAcquisitionPrice.Text))
+            {
+                MessageBox.Show("Цена приобретения не указана", "Проверка");
+                return;
+            }
+            if (string.IsNullOrEmpty(tbAskingPrice.Text))
+            {
+                MessageBox.Show("Цена продажи не указана", "Проверка");
+                return;
+            }
+            if (string.IsNullOrEmpty(tbCustomerID.Text))
+            {
+                MessageBox.Show("Номер клиента не указан", "Проверка");
+                return;
+            }
+            if (string.IsNullOrEmpty(tbSalesPrice.Text))
+            {
+                MessageBox.Show("Цена покупки не указана", "Проверка");
+                return;
+            }
+            //добавить проверку даты
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
     }
 }
