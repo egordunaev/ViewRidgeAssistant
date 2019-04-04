@@ -43,7 +43,7 @@ namespace VRA
                     break;
                 //case "Nations"
                 //case "Interests":this
-                default: MessageBox.Show("Необходимо выбрать таблицу, в которую добавляется элемент1");
+                default: MessageBox.Show("Необходимо выбрать таблицу, в которую добавляется элемент");
                     return;
             }
         }
@@ -82,13 +82,48 @@ namespace VRA
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
             //Получаем список  и передаем его на отображение таблице
-            dgArtists.ItemsSource = ProcessFactory.GetArtistProcess().GetList();
-            dgCustomers.ItemsSource = ProcessFactory.GetCustomerProcess().GetList();
-            dgTrans.ItemsSource = ProcessFactory.GetTransProcess().GetList();
-            dgWork.ItemsSource = ProcessFactory.GetWorkProcess().GetList();
-            dgInterests.ItemsSource = ProcessFactory.GetCustomerArtistIntProcess().GetList();
-        }
+            switch (status)
+            {
+                case "Artist":
+                    this.btnRefreshA_Click(sender, e);
+                    break;
+                case "Work":
+                    this.btnRefreshW_Click(sender, e);
+                    break;
+                case "Customer":
+                    this.btnRefreshC_Click(sender, e);
+                    break;
+                case "Trans":
+                    this.btnRefreshT_Click(sender, e);
+                    break;
+                //case "Nations"
+                //case "Interests":this
+                default:
+                    MessageBox.Show("Необходимо выбрать таблицу, в которую добавляется элемент");
+                    return;
+            }
 
+        }
+        private void btnRefreshA_Click(object sender, RoutedEventArgs e)
+        {
+            //Получаем список  и передаем его на отображение таблице
+            dgArtists.ItemsSource = ProcessFactory.GetArtistProcess().GetList();
+        }
+        private void btnRefreshC_Click(object sender, RoutedEventArgs e)
+        {
+            //Получаем список  и передаем его на отображение таблице
+            dgCustomers.ItemsSource = ProcessFactory.GetCustomerProcess().GetList();
+        }
+        private void btnRefreshW_Click(object sender, RoutedEventArgs e)
+        {
+            //Получаем список  и передаем его на отображение таблице
+            dgWork.ItemsSource = ProcessFactory.GetWorkProcess().GetList();
+        }
+        private void btnRefreshT_Click(object sender, RoutedEventArgs e)
+        {
+            //Получаем список  и передаем его на отображение таблице
+            dgTrans.ItemsSource = ProcessFactory.GetTransProcess().GetList();
+        }
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             //Получаем выделенную строку с объектом художника

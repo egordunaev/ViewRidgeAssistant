@@ -56,7 +56,7 @@ namespace VRA.DataAccess
                 conn.Open();
                 using (var cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT TransactionID, DateAcquired, AcquisitionPrice,PurchaseDate,SalesPrice,AskingPrice, CustomerID,WorkID FROM TRANS";
+                    cmd.CommandText = "SELECT DateAcquired, AcquisitionPrice,PurchaseDate,SalesPrice,AskingPrice, TransactionID,CustomerID,WorkID FROM TRANS";
                     using (var dataReader = cmd.ExecuteReader())
                     {
                         while (dataReader.Read())

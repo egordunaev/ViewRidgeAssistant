@@ -136,3 +136,9 @@ C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\VRA.csproj.Core
 C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\VRA.csproj.CopyComplete
 C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\VRA.exe
 C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\VRA.pdb
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerWindow.g.cs
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA\obj\Debug\AddTransWindow.g.cs
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA\obj\Debug\AddWorkWindow.g.cs
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerWindow.baml
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA\obj\Debug\AddTransWindow.baml
+D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA\obj\Debug\AddWorkWindow.baml
