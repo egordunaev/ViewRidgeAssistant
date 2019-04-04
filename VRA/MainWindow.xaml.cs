@@ -126,6 +126,30 @@ namespace VRA
         }
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
+            switch (status)
+            {
+                case "Artist":
+                    this.btnDeleteA_Click(sender, e);
+                    break;
+                case "Work":
+                    this.btnDeleteW_Click(sender, e);
+                    break;
+                case "Customer":
+                    this.btnDeleteC_Click(sender, e);
+                    break;
+                case "Trans":
+                    this.btnDeleteT_Click(sender, e);
+                    break;
+                //case "Nations"
+                //case "Interests":this
+                default:
+                    MessageBox.Show("Необходимо выбрать таблицу, в которую добавляется элемент1");
+                    return;
+            }
+
+        }
+        private void btnDeleteA_Click(object sender, RoutedEventArgs e)
+        {
             //Получаем выделенную строку с объектом художника
             ArtistDto item = dgArtists.SelectedItem as ArtistDto;
             //если там не художник или пользователь ничего не выбрал сообщаем об этом
@@ -135,7 +159,7 @@ namespace VRA
                 return;
             }
             //Просим подтвердить удаление
-            MessageBoxResult result = MessageBox.Show("Удалить художника " +item.Name + "?","Удаление художника", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            MessageBoxResult result = MessageBox.Show("Удалить художника " + item.Name + "?", "Удаление художника", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             //Если пользователь не подтвердил, выходим
             if (result != MessageBoxResult.Yes)
                 return;
@@ -145,7 +169,69 @@ namespace VRA
             btnRefresh_Click(sender, e);
 
         }
+        private void btnDeleteC_Click(object sender, RoutedEventArgs e)
+        {
+            //Получаем выделенную строку с объектом художника
+            CustomerDto item = dgCustomers.SelectedItem as CustomerDto;
+            //если там не художник или пользователь ничего не выбрал сообщаем об этом
+            if (item == null)
+            {
+                MessageBox.Show("Выберите запись для удаления", "Удаление художника");
+                return;
+            }
+            //Просим подтвердить удаление
+            MessageBoxResult result = MessageBox.Show("Удалить художника " + item.Name + "?", "Удаление художника", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            //Если пользователь не подтвердил, выходим
+            if (result != MessageBoxResult.Yes)
+                return;
+            //Если все проверки пройдены и подтверждение получено, удаляем художника
+            ProcessFactory.GetCustomerProcess().Delete(item.CustomerID);
+            //И перезагружаем список художников
+            btnRefresh_Click(sender, e);
 
+        }
+        private void btnDeleteW_Click(object sender, RoutedEventArgs e)
+        {
+            //Получаем выделенную строку с объектом художника
+            WorkDto item = dgWork.SelectedItem as WorkDto;
+            //если там не художник или пользователь ничего не выбрал сообщаем об этом
+            if (item == null)
+            {
+                MessageBox.Show("Выберите запись для удаления", "Удаление художника");
+                return;
+            }
+            //Просим подтвердить удаление
+            MessageBoxResult result = MessageBox.Show("Удалить художника " + item.Title + "?", "Удаление художника", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            //Если пользователь не подтвердил, выходим
+            if (result != MessageBoxResult.Yes)
+                return;
+            //Если все проверки пройдены и подтверждение получено, удаляем художника
+            ProcessFactory.GetWorkProcess().Delete(item.WorkID);
+            //И перезагружаем список художников
+            btnRefresh_Click(sender, e);
+
+        }
+        private void btnDeleteT_Click(object sender, RoutedEventArgs e)
+        {
+            //Получаем выделенную строку с объектом художника
+            TransDto item = dgTrans.SelectedItem as TransDto;
+            //если там не художник или пользователь ничего не выбрал сообщаем об этом
+            if (item == null)
+            {
+                MessageBox.Show("Выберите запись для удаления", "Удаление художника");
+                return;
+            }
+            //Просим подтвердить удаление
+            MessageBoxResult result = MessageBox.Show("Удалить художника " + item.TransactionID + "?", "Удаление художника", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            //Если пользователь не подтвердил, выходим
+            if (result != MessageBoxResult.Yes)
+                return;
+            //Если все проверки пройдены и подтверждение получено, удаляем художника
+            ProcessFactory.GetTransProcess().Delete(item.TransactionID);
+            //И перезагружаем список художников
+            btnRefresh_Click(sender, e);
+
+        }
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
             switch (status)
@@ -219,7 +305,7 @@ namespace VRA
             //Создаем окно
             AddWorkWindow window = new AddWorkWindow();
             //Передаем объект на редактирование
-            //-------------window.Load(item);
+            window.Load(item);
             //Отображаем окно с данными
             window.ShowDialog();
             //Перезагружаем список объектов
@@ -238,7 +324,7 @@ namespace VRA
             //Создаем окно
             AddTransWindow window = new AddTransWindow();
             //Передаем объект на редактирование
-            //----------window.Load(item);
+            window.Load(item);
             //Отображаем окно с данными
             window.ShowDialog();
             //Перезагружаем список объектов
