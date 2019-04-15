@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VRA"
         mc:Ignorable="d"
-        Title="ViewRidgeAssistant" Height="550.762" Width="672.285" WindowStartupLocation="CenterScreen">
+        Title="ViewRidgeAssistant" Height="550.762" Width="672.285">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80*"/>
@@ -24,7 +24,15 @@
         </Grid.ColumnDefinitions>
 
         <Button Name="btnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="6,25,0,0" VerticalAlignment="Top" Width="60" Click="btnAdd_Click" Height="50" Grid.Column="2"/>
-        <DataGrid Name="dgArtists" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
+        <DataGrid Name="dgArtists" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn Header="Год рождения" Binding="{Binding Path=BirthYear}"/>
+                <DataGridTextColumn Header="Год смерти" Binding="{Binding Path=DeceaseYear}"/>
+                <DataGridTextColumn Header="Национальность" Binding="{Binding Path=Nation.Nationality}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
         <DataGrid Name="dgCustomers" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
         <DataGrid Name="dgWork" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
         <DataGrid Name="dgTrans" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
@@ -88,6 +96,16 @@
                 </Button.ToolTip>
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center" Margin="1" FontSize="10"><Run Text="Транзакции"/></TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Orientation="Vertical" Grid.ColumnSpan="1" VerticalAlignment="Bottom" Height="52" Grid.Row="4">
+            <Button HorizontalAlignment="Center" x:Name="btnNationality" VerticalAlignment="Top" Height="52" Width="70" Click="btnNationality_Click">
+                <Button.ToolTip>
+                    <TextBlock><Run Text="Таблица национальностей"/></TextBlock>
+                </Button.ToolTip>
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center" Margin="1" FontSize="8"><Run Text="Национальности"/></TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>

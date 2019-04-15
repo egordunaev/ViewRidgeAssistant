@@ -14,6 +14,6 @@ namespace VRA.DataAccess.Entities
         public string Name;
         public int BirthYear;
         public int? DeceaseYear;
-        public string Nationality;
+        public int NationID;
     }
 }

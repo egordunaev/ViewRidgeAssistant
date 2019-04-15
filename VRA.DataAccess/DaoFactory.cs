@@ -31,5 +31,9 @@ namespace VRA.DataAccess
         {
             return new WorkDao();
         }
+        public static INationDao GetNationDao()
+        {
+            return new NationDao();
+        }
     }
 }

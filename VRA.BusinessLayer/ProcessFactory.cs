@@ -37,5 +37,9 @@ namespace VRA.BusinessLayer
         {
             return new TransProcessDb();
         }
+        public static INationProcess GetNationProcess()
+        {
+            return new NationProcess();
+        }
     }
 }

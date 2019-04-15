@@ -118,7 +118,7 @@ namespace VRA.DataAccess
                     cmd.Parameters.AddWithValue("@City", customer.City);
                     cmd.Parameters.AddWithValue("@Region", customer.Region);
                     cmd.Parameters.AddWithValue("@ZipPostalCode", customer.ZipPostalCode);
-                    cmd.Parameters.AddWithValue("@County", customer.Country);
+                    cmd.Parameters.AddWithValue("@Country", customer.Country);
                     cmd.Parameters.AddWithValue("@PhoneNumber", customer.PhoneNumber);
                     cmd.ExecuteNonQuery();
                 }
