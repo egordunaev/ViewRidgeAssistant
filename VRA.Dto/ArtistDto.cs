@@ -30,6 +30,6 @@ namespace VRA.Dto
         /// <summary>
         /// Национальность
         /// </summary>
-        public string Nationality { get; set; }
+        public NationDto Nation { get; set; }
     }
 }

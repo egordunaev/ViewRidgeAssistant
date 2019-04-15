@@ -16,7 +16,7 @@
         <TextBox Name="tbName" HorizontalAlignment="Left" Height="23" Margin="228,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
         <TextBox Name="tbBirth" HorizontalAlignment="Left" Height="23" Margin="228,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
         <TextBox Name="tbDeath" HorizontalAlignment="Left" Height="23" Margin="228,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
-        <ComboBox Name="cbNationality" HorizontalAlignment="Left" Margin="228,103,0,0" VerticalAlignment="Top" Width="157"/>
+        <ComboBox Name="cbNationality" HorizontalAlignment="Left" Margin="228,103,0,0" VerticalAlignment="Top" Width="157" ItemsSource="{Binding}" DisplayMemberPath="Nationality"/>
 
     </Grid>
 </Window>

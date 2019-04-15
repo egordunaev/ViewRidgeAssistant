@@ -21,14 +21,15 @@ namespace VRA
     /// </summary>
     public partial class AddArtistWindow : Window
     {
+        private readonly IList<NationDto> Nationalities = ProcessFactory.GetNationProcess().GetList();
         /// <summary>
         /// Поле хранит идентификатор художника
         /// </summary>
         private int _id;
         public void Load(ArtistDto artist)
         {
-            //если объект не существует, или его национальность не в списке допустимых,выходим
-            if (artist == null || !Nationalities.Contains(artist.Nationality))
+            //если объект не существует выходим
+            if (artist == null)
                 return;
             //сохраняем id художника
             _id = artist.Id;
@@ -37,18 +38,22 @@ namespace VRA
             tbBirth.Text = artist.BirthYear.ToString();
             if (artist.DeceaseYear.HasValue)
                 tbDeath.Text = artist.DeceaseYear.Value.ToString();
-            cbNationality.SelectedItem = artist.Nationality;
-        }
-        /// <summary>
-        /// Список допустимых национальностей
-        /// </summary>
-        private static readonly string[] Nationalities =
-        {"Русский", "Немец", "Испанец", "Итальянец"};
+            if (artist.Nation != null)
+            {
+                foreach (NationDto Nat in Nationalities)
+                {
+                    if (artist.Nation.NationID == Nat.NationID)
+                    {
+                        this.cbNationality.SelectedItem = Nat;
+                        break;
+                    }
+                }
+            }        }
         public AddArtistWindow()
         {
             InitializeComponent();
             //Передаем допустимые значения
-            cbNationality.ItemsSource = Nationalities;
+            cbNationality.ItemsSource = (from N in Nationalities orderby N.Nationality select N);
             //Задаем начальное значение
             cbNationality.SelectedIndex = 0;
         }
@@ -97,7 +102,7 @@ namespace VRA
             artist.Name = tbName.Text;
             artist.BirthYear = birth;
             artist.DeceaseYear = death;
-            artist.Nationality = cbNationality.SelectedItem.ToString();
+            artist.Nation = cbNationality.SelectedItem as NationDto;
             //Именно тут запрашиваем реализованную ранее задачу по работе с художниками
             IArtistProcess artistProcess = ProcessFactory.GetArtistProcess();
             //если это новый объект - сохраняем его

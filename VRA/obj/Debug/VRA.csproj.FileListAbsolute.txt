@@ -142,3 +142,5 @@ D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA\obj\Debug\AddWorkWindow.g.cs
 D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerWindow.baml
 D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA\obj\Debug\AddTransWindow.baml
 D:\Programs\_dev\Projects\ViewRidgeAssistant\VRA\obj\Debug\AddWorkWindow.baml
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\AddNationsWindow.g.cs
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\AddNationsWindow.baml
