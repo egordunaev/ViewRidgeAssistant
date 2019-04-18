@@ -14,10 +14,10 @@ namespace VRA.Dto
         /// <summary>
         /// Номер художника
         /// </summary>
-        public int ArtistID { get; set; }
+        public ArtistDto Artist { get; set; }
         /// <summary>
         /// Номер клиента
         /// </summary>
-        public int CustomerID { get; set; }
+        public CustomerDto Customer { get; set; }
     }
 }

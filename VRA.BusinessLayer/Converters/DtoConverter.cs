@@ -190,8 +190,8 @@ namespace VRA.BusinessLayer.Converters
             if (customerArtistInt == null)
                 return null;
             CustomerArtistIntDto customerArtistIntDto = new CustomerArtistIntDto();
-            customerArtistIntDto.CustomerID = customerArtistInt.CustomerID;
-            customerArtistIntDto.ArtistID = customerArtistInt.ArtistID;
+            customerArtistIntDto.Customer = Convert(DaoFactory.GetCustomerDao().Get(customerArtistInt.CustomerID));
+            customerArtistIntDto.Artist = Convert(DaoFactory.GetArtistDao().Get(customerArtistInt.ArtistID));
             return customerArtistIntDto;
         }
         public static CustomerArtistInt Convert(CustomerArtistIntDto customerArtistIntDto)
@@ -199,8 +199,8 @@ namespace VRA.BusinessLayer.Converters
             if (customerArtistIntDto == null)
                 return null;
             CustomerArtistInt customerArtistInt = new CustomerArtistInt();
-            customerArtistInt.CustomerID = customerArtistIntDto.CustomerID;
-            customerArtistInt.ArtistID = customerArtistIntDto.ArtistID;
+            customerArtistInt.CustomerID = customerArtistIntDto.Customer.CustomerID;
+            customerArtistInt.ArtistID = customerArtistIntDto.Artist.Id;
             return customerArtistInt;
         }
         public static IList<CustomerArtistIntDto> Convert(IList<CustomerArtistInt> customerArtistInts)

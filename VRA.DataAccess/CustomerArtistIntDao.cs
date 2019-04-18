@@ -152,8 +152,10 @@ namespace VRA.DataAccess
             CustomerArtistInt customerArtistInt = new CustomerArtistInt();
             //Заполняем поля объекта в соответствии с названиями полей результирующего
             // набора данных
-            customerArtistInt.ArtistID = reader.GetInt32(reader.GetOrdinal("ArtistID"));
-            customerArtistInt.CustomerID = reader.GetInt32(reader.GetOrdinal("CustomerID"));
+            int cust = reader.GetOrdinal("CustomerID");
+            int art = reader.GetOrdinal("ArtistID");
+            customerArtistInt.CustomerID = reader[cust] == DBNull.Value ? -1 : reader.GetInt32(cust);
+            customerArtistInt.ArtistID = reader[art] == DBNull.Value ? -1 : reader.GetInt32(art);
             return customerArtistInt;
         }
     }

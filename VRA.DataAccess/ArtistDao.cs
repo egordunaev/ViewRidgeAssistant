@@ -11,6 +11,28 @@ namespace VRA.DataAccess
 {
     public class ArtistDao: BaseDao, IArtistDao
     {
+        private static IDictionary<int, Artist> Artists;
+        private IList<Artist> LoadInternal()
+        {
+            IList<Artist> artists = new List<Artist>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT ArtistID, Name, BirthYear, DeceaseYear, NatID FROM ARTIST";
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while(reader.Read())
+                        {
+                            artists.Add(LoadArtist(reader));
+                        }
+                    }
+                }
+            }
+            return artists;
+        }
         /// <summary>
         /// Получить определенного художника
         /// </summary>
@@ -18,32 +40,10 @@ namespace VRA.DataAccess
         /// <returns></returns>
         public Artist Get(int id)
         {
-            //Получаем объект подключения к базе
-            using (var conn = GetConnection())
-            {
-                //Открываем соединение
-                conn.Open();
-                //Создаем sql команду
-                using (var cmd = conn.CreateCommand())
-                {
-                    //Задаём текст команды
-                    cmd.CommandText = "SELECT ArtistID, Name, BirthYear, DeceaseYear, NatID FROM ARTIST WHERE ArtistID = @id";
-                    //Добавляем значение параметра
-                    cmd.Parameters.AddWithValue("@id", id);
-                    //Открываем SqlDataReader для чтения полученных в результате
-                    //выполнения запроса данных
-                    using (var dataReader = cmd.ExecuteReader())
-                    {
-                        //Если есть запись, то работаем с ней
-                        if (dataReader.Read())
-                        {
-                            return !dataReader.Read() ? null : LoadArtist(dataReader);
-                        }
-                        return null;
-                    }
-                }
-            }
-            }
+            if (Artists == null)
+                Load();
+            return Artists.ContainsKey(id) ? Artists[id] : null;
+        }
         /// <summary>
         /// Получить всех художников.
         /// </summary>
@@ -170,5 +170,21 @@ namespace VRA.DataAccess
             return artist;
         }
 
+        public IList<Artist> Load()
+        {
+            Artists = new Dictionary<int, Artist>();
+            var artists = LoadInternal();
+            foreach(var artist in artists)
+            {
+                Artists.Add(artist.ArtistId, artist);
+            }
+            return Artists.Values.ToList();
+        }
+        public void Reset()
+        {
+            if (Artists == null)
+                return;
+            Artists.Clear();
+        }
     }
 }

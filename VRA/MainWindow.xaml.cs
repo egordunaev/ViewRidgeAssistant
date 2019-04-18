@@ -43,10 +43,19 @@ namespace VRA
                     break;
                 case "Nations":this.btnAddN_Click(sender, e);
                     break;
-                //case "Interests":this
+                case "Interests":this.btnAddI_Click(sender, e);
+                    break;
                 default: MessageBox.Show("Необходимо выбрать таблицу, в которую добавляется элемент");
                     return;
             }
+        }
+        private void btnAddI_Click(object sender, RoutedEventArgs e)
+        {
+            AddCustomerArtistIntWindow window = new AddCustomerArtistIntWindow();
+            window.ShowDialog();
+
+            //Получаем список художников и передаем его на отображение таблице
+            dgInterests.ItemsSource = ProcessFactory.GetCustomerArtistIntProcess().GetList();
         }
         private void btnAddN_Click(object sender, RoutedEventArgs e)
         {
@@ -107,7 +116,9 @@ namespace VRA
                     break;
                 case "Nations": this.btnRefreshN_Click(sender,e);
                     break;
-                //case "Interests":this
+                case "Interests":
+                    this.btnRefreshI_Click(sender, e);
+                    break;
                 default:
                     MessageBox.Show("Необходимо выбрать таблицу, в которую добавляется элемент");
                     return;
@@ -118,6 +129,11 @@ namespace VRA
         {
             //Получаем список  и передаем его на отображение таблице
             dgNations.ItemsSource = ProcessFactory.GetNationProcess().GetList();
+        }
+        private void btnRefreshI_Click(object sender, RoutedEventArgs e)
+        {
+            //Получаем список  и передаем его на отображение таблице
+            dgInterests.ItemsSource = ProcessFactory.GetCustomerArtistIntProcess().GetList();
         }
         private void btnRefreshA_Click(object sender, RoutedEventArgs e)
         {
@@ -157,7 +173,9 @@ namespace VRA
                     break;
                 case "Nations": this.btnDeleteN_Click(sender, e);
                     break;
-                //case "Interests":this
+                case "Interests":
+                    this.btnDeleteI_Click(sender, e);
+                    break;
                 default:
                     MessageBox.Show("Необходимо выбрать таблицу, в которую добавляется элемент1");
                     return;
@@ -181,6 +199,27 @@ namespace VRA
                 return;
             //Если все проверки пройдены и подтверждение получено, удаляем художника
             ProcessFactory.GetNationProcess().Delete(item.NationID);
+            //И перезагружаем список художников
+            btnRefresh_Click(sender, e);
+
+        }
+        private void btnDeleteI_Click(object sender, RoutedEventArgs e)
+        {
+            //Получаем выделенную строку с объектом художника
+            CustomerArtistIntDto item = dgInterests.SelectedItem as CustomerArtistIntDto;
+            //если там не художник или пользователь ничего не выбрал сообщаем об этом
+            if (item == null)
+            {
+                MessageBox.Show("Выберите запись для удаления", "Удаление интересов");
+                return;
+            }
+            //Просим подтвердить удаление
+            MessageBoxResult result = MessageBox.Show("Удалить интерес " + item.Customer+" в "+item.Artist + "?", "Удаление удаление интереса", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            //Если пользователь не подтвердил, выходим
+            if (result != MessageBoxResult.Yes)
+                return;
+            //Если все проверки пройдены и подтверждение получено, удаляем художника
+            ProcessFactory.GetCustomerArtistIntProcess().Delete(item.Customer.CustomerID,item.Artist.Id);
             //И перезагружаем список художников
             btnRefresh_Click(sender, e);
 
@@ -286,11 +325,32 @@ namespace VRA
                     break;
                 case "Nations": this.btnEditN_Click(sender, e);
                     break;
-                //case "Interests":this
+                case "Interests":
+                    this.btnEditI_Click(sender, e);
+                    break;
                 default:
                     MessageBox.Show("Необходимо выбрать таблицу, в которую добавляется элемент!");
                     return;
             }
+        }
+        private void btnEditI_Click(object sender, RoutedEventArgs e)
+        {
+            //Получаем выделенную строку с объектом художника
+            CustomerArtistIntDto item = dgInterests.SelectedItem as CustomerArtistIntDto;
+            //если там не художник или пользователь ничего не выбрал сообщаем об этом
+            if (item == null)
+            {
+                MessageBox.Show("Выберите запись для редактирования", "Редактирование");
+                return;
+            }
+            //Создаем окно
+            AddCustomerArtistIntWindow window = new AddCustomerArtistIntWindow();
+            //Передаем объект на редактирование
+            //------------window.Load(item);
+            //Отображаем окно с данными
+            window.ShowDialog();
+            //Перезагружаем список объектов
+            btnRefresh_Click(sender, e);
         }
         private void btnEditN_Click(object sender, RoutedEventArgs e)
         {
@@ -563,6 +623,33 @@ namespace VRA
             this.btnDelete.Visibility = Visibility.Visible;
             this.btnRefresh.Visibility = Visibility.Visible;
             this.btnSearch.Visibility = Visibility.Visible;
+        }
+
+        private void btnInterest_Click(object sender, RoutedEventArgs e)
+        {
+            switch (status)
+            {
+                case "Artist":
+                    this.dgArtists.Visibility = Visibility.Hidden;
+                    break;
+                case "Work":
+                    this.dgWork.Visibility = Visibility.Hidden;
+                    break;
+                case "Customer":
+                    this.dgCustomers.Visibility = Visibility.Hidden;
+                    break;
+                case "Nations":
+                    this.dgNations.Visibility = Visibility.Hidden;
+                    break;
+                case "Trans":
+                    this.dgTrans.Visibility = Visibility.Hidden;
+                    break;
+            }
+            this.dgInterests.Visibility = Visibility.Visible;//отображаем DateGrid транзакций
+            status = "Interests";//устанавливаем таблицу, с которой работаем в данный момент
+            this.btnRefresh_Click(sender, e);//загружаем данные в DateGrid
+            this.statusLabel.Content = "Работа с таблицей: Национальности";
+
         }
     }
 }

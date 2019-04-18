@@ -1,0 +1,17 @@
+﻿<Window x:Class="VRA.AddCustomerArtistIntWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VRA"
+        mc:Ignorable="d"
+        Title="Интерес клиентов в художниках" Height="135" Width="320" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Художник" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="100"/>
+        <ComboBox Name="cbArtist" HorizontalAlignment="Left" Margin="150,10,0,0" VerticalAlignment="Top" Width="150" ItemsSource="{Binding}" DisplayMemberPath="Artist"/>
+        <ComboBox Name="cbClient" HorizontalAlignment="Left" Margin="150,40,0,0" VerticalAlignment="Top" Width="150" ItemsSource="{Binding}" DisplayMemberPath="Client"/>
+        <Label Content="Клиент" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Name="btnSave" Content="Сохранить" HorizontalAlignment="Left" Margin="30,70,0,0" VerticalAlignment="Top" Width="120" Click="btnSave_Click"/>
+        <Button Name="btnCancel" Content="Отмена" HorizontalAlignment="Left" Margin="180,70,0,0" VerticalAlignment="Top" Width="120" Click="btnCancel_Click"/>
+    </Grid>
+</Window>

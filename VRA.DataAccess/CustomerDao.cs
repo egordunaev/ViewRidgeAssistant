@@ -9,8 +9,30 @@ using System.Configuration;
 
 namespace VRA.DataAccess
 {
-    public class CustomerDao: ICustomerDao
+    public class CustomerDao: BaseDao, ICustomerDao
     {
+        private static IDictionary<int, Customer> Customers;
+        private IList<Customer> LoadInternal()
+        {
+            IList<Customer> customers = new List<Customer>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT CustomerID, Name, Email, AreaCode, HouseNumber, Street, City, Region, ZipPostalCode, Country, PhoneNumber FROM CUSTOMER";
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            customers.Add(LoadCustomer(reader));
+                        }
+                    }
+                }
+                return customers;
+            }
+        }
         /// <summary>
         /// Получить определенного клиента
         /// </summary>
@@ -18,31 +40,9 @@ namespace VRA.DataAccess
         /// <returns></returns>
         public Customer Get(int id)
         {
-            //Получаем объект подключения к базе
-            using (var conn = GetConnection())
-            {
-                //Открываем соединение
-                conn.Open();
-                //Создаем sql команду
-                using (var cmd = conn.CreateCommand())
-                {
-                    //Задаём текст команды
-                    cmd.CommandText = "SELECT CustomerID, Name, Email, AreaCode, HouseNumber, Street, City, Region, ZipPostalCode, Country, PhoneNumber FROM CUSTOMER WHERE CustomerID = @id";
-                    //Добавляем значение параметра
-                    cmd.Parameters.AddWithValue("@id", id);
-                    //Открываем SqlDataReader для чтения полученных в результате
-                    //выполнения запроса данных
-                    using (var dataReader = cmd.ExecuteReader())
-                    {
-                        //Если есть запись, то работаем с ней
-                        if (dataReader.Read())
-                        {
-                            return !dataReader.Read() ? null : LoadCustomer(dataReader);
-                        }
-                        return null;
-                    }
-                }
-            }
+            if (Customers == null)
+                Load();
+            return Customers.ContainsKey(id) ? Customers[id] : null;
         }
         /// <summary>
         /// Получить всех клиентов.
@@ -183,6 +183,23 @@ namespace VRA.DataAccess
             customer.Country = reader.GetString(reader.GetOrdinal("Country"));
             customer.PhoneNumber = reader.GetString(reader.GetOrdinal("PhoneNumber"));
             return customer;
+        }
+
+        public IList<Customer> Load()
+        {
+            Customers = new Dictionary<int, Customer>();
+            var customers = LoadInternal();
+            foreach(var customer in customers)
+            {
+                Customers.Add(customer.CustomerID, customer);
+            }
+            return Customers.Values.ToList();
+        }
+        public void Reset()
+        {
+            if (Customers == null)
+                return;
+            Customers.Clear();
         }
     }
 }

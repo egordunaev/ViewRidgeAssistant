@@ -12,6 +12,7 @@ namespace VRA.BusinessLayer
 {
     class ArtistProcessDb : IArtistProcess
     {
+        private static IArtistDao artistDao = new ArtistDao();
         private readonly IArtistDao _artistDao;
         public ArtistProcessDb()
         {
@@ -20,7 +21,7 @@ namespace VRA.BusinessLayer
         }
         public IList<ArtistDto> GetList()
         {
-            return DtoConverter.Convert(_artistDao.GetAll());
+            return DtoConverter.Convert(DaoFactory.GetArtistDao().Load());
         }
         public ArtistDto Get(int id)
         {
@@ -28,7 +29,7 @@ namespace VRA.BusinessLayer
         }
         public void Add(ArtistDto artist)
         {
-            _artistDao.Add(DtoConverter.Convert(artist));
+            artistDao.Add(DtoConverter.Convert(artist));
         }
         public void Update(ArtistDto artist)
         {
@@ -36,7 +37,7 @@ namespace VRA.BusinessLayer
         }
         public void Delete(int id)
         {
-            _artistDao.Delete(id);
+            artistDao.Delete(id);
         }
     }
 }

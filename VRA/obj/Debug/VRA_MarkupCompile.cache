@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\
 VRA
 none
 false
 DEBUG;TRACE
-D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\App.xaml
-7228977080
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\App.xaml
+8794590736
 
-111760111941
-15612514988
-AddArtistWindow.xaml;AddCustomerWindow.xaml;AddNationsWindow.xaml;AddTransWindow.xaml;AddWorkWindow.xaml;MainWindow.xaml;SettingsWindow.xaml;
+12912934496
+151306159904
+AddArtistWindow.xaml;AddCustomerArtistIntWindow.xaml;AddCustomerWindow.xaml;AddNationsWindow.xaml;AddTransWindow.xaml;AddWorkWindow.xaml;MainWindow.xaml;SettingsWindow.xaml;
 
 False
 

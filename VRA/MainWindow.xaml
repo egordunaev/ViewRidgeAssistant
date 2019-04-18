@@ -36,7 +36,13 @@
         <DataGrid Name="dgCustomers" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
         <DataGrid Name="dgWork" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
         <DataGrid Name="dgTrans" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
-        <DataGrid Name="dgInterests" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
+        <DataGrid Name="dgInterests" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Художник" Binding="{Binding Path=Artist}"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding Path=Customer}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
         <DataGrid Name="dgNations" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
         <Button Name="btnRefresh" Content="Обновить" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Top" Width="60" Click="btnRefresh_Click" Height="49" Grid.Column="2" Grid.Row="3"/>
         <Button Name="btnDelete" Content="Удалить" HorizontalAlignment="Left" Margin="6,1,0,0" VerticalAlignment="Top" Width="60" Click="btnDelete_Click" Height="50" Grid.Column="2" Grid.Row="2"/>
@@ -106,6 +112,16 @@
                 </Button.ToolTip>
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center" Margin="1" FontSize="8"><Run Text="Национальности"/></TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Orientation="Vertical" Grid.ColumnSpan="1" VerticalAlignment="Bottom" Height="52" Grid.Row="5">
+            <Button HorizontalAlignment="Center" x:Name="btnInterest" VerticalAlignment="Top" Height="52" Width="70" Click="btnInterest_Click">
+                <Button.ToolTip>
+                    <TextBlock><Run Text="Таблица интересов"/></TextBlock>
+                </Button.ToolTip>
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center" Margin="1" FontSize="8"><Run Text="Интересы"/></TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>

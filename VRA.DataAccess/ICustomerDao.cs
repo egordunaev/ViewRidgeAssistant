@@ -39,5 +39,6 @@ namespace VRA.DataAccess
         /// </summary>
         /// <param name="id">Номер клиента</param>
         void Delete(int id);
+        IList<Customer> Load();
     }
 }

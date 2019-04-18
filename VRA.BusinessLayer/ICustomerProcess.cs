@@ -38,5 +38,6 @@ namespace VRA.BusinessLayer
         /// </summary>
         /// <param name="id">Номер клиента</param>
         void Delete(int id);
+        
     }
 }

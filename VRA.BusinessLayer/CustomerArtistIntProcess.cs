@@ -13,7 +13,7 @@ namespace VRA.BusinessLayer
         public void Add(CustomerArtistIntDto customerArtistInt)
         {
             int max = CustomerArtistInts.Keys.Count == 0 ? 1 : CustomerArtistInts.Keys.Max(p => p) + 1;
-            customerArtistInt.CustomerID = max;
+            customerArtistInt.Customer.CustomerID = max;
             CustomerArtistInts.Add(max, customerArtistInt);
         }
 
@@ -38,8 +38,8 @@ namespace VRA.BusinessLayer
 
         public void Update(CustomerArtistIntDto customerArtistInt)
         {
-            if (CustomerArtistInts.ContainsKey(customerArtistInt.CustomerID) && CustomerArtistInts.ContainsKey(customerArtistInt.ArtistID))
-                CustomerArtistInts[customerArtistInt.CustomerID] = customerArtistInt;
+            if (CustomerArtistInts.ContainsKey(customerArtistInt.Customer.CustomerID) && CustomerArtistInts.ContainsKey(customerArtistInt.Artist.Id))
+                CustomerArtistInts[customerArtistInt.Customer.CustomerID] = customerArtistInt;
         }
     }
 }

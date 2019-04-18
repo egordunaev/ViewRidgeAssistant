@@ -38,5 +38,6 @@ namespace VRA.BusinessLayer
         /// </summary>
         /// <param name="id">Номер работы</param>
         void Delete(int id);
+        //IList<WorkDto> GetList();
     }
 }
