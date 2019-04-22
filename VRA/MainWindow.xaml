@@ -38,8 +38,8 @@
         <DataGrid Name="dgTrans" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
         <DataGrid Name="dgInterests" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Художник" Binding="{Binding Path=Artist}"/>
-                <DataGridTextColumn Header="Клиент" Binding="{Binding Path=Customer}"/>
+                <DataGridTextColumn Header="Художник" Binding="{Binding Path=Artist.Name}"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding Path=Customer.Name}"/>
 
             </DataGrid.Columns>
         </DataGrid>

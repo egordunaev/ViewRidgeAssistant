@@ -8,7 +8,8 @@ namespace VRA.DataAccess.Entities
 {
     public class Nation
     {
-        public int NationID { get; set; }
-        public string Name { get; set; }
+        public int NationID;
+        public string Name;
     }
+    
 }

@@ -27,7 +27,7 @@ namespace VRA.BusinessLayer
         }
         public static ICustomerArtistIntProcess GetCustomerArtistIntProcess()
         {
-            return new CustomerArtistIntProcess();
+            return new CustomerArtistIntDb();
         }
         public static IWorkProcess GetWorkProcess()
         {

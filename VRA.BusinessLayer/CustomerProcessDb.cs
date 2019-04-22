@@ -11,7 +11,8 @@ namespace VRA.BusinessLayer
 {
     class CustomerProcessDb : ICustomerProcess
     {
-        private readonly ICustomerDao customerDao;
+        private static ICustomerDao customerDao = new CustomerDao();
+        //private readonly ICustomerDao customerDao;
         public CustomerProcessDb()
         {
             customerDao = DaoFactory.GetCustomerDao();
@@ -33,7 +34,7 @@ namespace VRA.BusinessLayer
 
         public IList<CustomerDto> GetList()
         {
-            return DtoConverter.Convert(customerDao.GetAll());
+            return DtoConverter.Convert(DaoFactory.GetCustomerDao().Load());
         }
 
         public void Update(CustomerDto customer)

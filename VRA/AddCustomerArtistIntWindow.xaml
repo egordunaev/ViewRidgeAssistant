@@ -8,8 +8,8 @@
         Title="Интерес клиентов в художниках" Height="135" Width="320" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Content="Художник" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="100"/>
-        <ComboBox Name="cbArtist" HorizontalAlignment="Left" Margin="150,10,0,0" VerticalAlignment="Top" Width="150" ItemsSource="{Binding}" DisplayMemberPath="Artist"/>
-        <ComboBox Name="cbClient" HorizontalAlignment="Left" Margin="150,40,0,0" VerticalAlignment="Top" Width="150" ItemsSource="{Binding}" DisplayMemberPath="Client"/>
+        <ComboBox Name="cbArtist" HorizontalAlignment="Left" Margin="150,10,0,0" VerticalAlignment="Top" Width="150" ItemsSource="{Binding}" DisplayMemberPath="Name"/>
+        <ComboBox Name="cbClient" HorizontalAlignment="Left" Margin="150,40,0,0" VerticalAlignment="Top" Width="150" ItemsSource="{Binding}" DisplayMemberPath="Name"/>
         <Label Content="Клиент" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="100"/>
         <Button Name="btnSave" Content="Сохранить" HorizontalAlignment="Left" Margin="30,70,0,0" VerticalAlignment="Top" Width="120" Click="btnSave_Click"/>
         <Button Name="btnCancel" Content="Отмена" HorizontalAlignment="Left" Margin="180,70,0,0" VerticalAlignment="Top" Width="120" Click="btnCancel_Click"/>
