@@ -34,8 +34,26 @@
             </DataGrid.Columns>
         </DataGrid>
         <DataGrid Name="dgCustomers" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
-        <DataGrid Name="dgWork" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
-        <DataGrid Name="dgTrans" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1"/>
+        <DataGrid Name="dgWork" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Автор" Binding="{Binding Path=Artist.Name}"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Path=Title}"/>
+                <DataGridTextColumn Header="Копия" Binding="{Binding Path=Copy}"/>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Path=Description}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Name="dgTrans" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="№" Binding="{Binding Path=TransactionID}"/>
+                <DataGridTextColumn Header="Автор" Binding="{Binding Path=Work.Artist.Name}"/>
+                <DataGridTextColumn Header="Работа" Binding="{Binding Path=Work.Title}"/>
+                <DataGridTextColumn Header="Дата приобретения" Binding="{Binding Path=DateAcquired, StringFormat=\{0:dd.MM.yyyy\}}"/>
+                <DataGridTextColumn Header="Цена приобретения" Binding="{Binding Path=AcquisitionPrice}"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding Path=Customer.Name}"/>
+                <DataGridTextColumn Header="Дата продажи" Binding="{Binding Path=PurchaseDate, StringFormat=\{0:dd.MM.yyyy\}}"/>
+            </DataGrid.Columns>
+        </DataGrid>
         <DataGrid Name="dgInterests" Height="337" VerticalAlignment="Top" Margin="0,35,1,0" Visibility="Hidden" Grid.RowSpan="7" Grid.Column="1" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Художник" Binding="{Binding Path=Artist.Name}"/>

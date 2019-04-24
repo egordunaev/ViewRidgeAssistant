@@ -9,8 +9,30 @@ using System.Configuration;
 
 namespace VRA.DataAccess
 {
-    public class WorkDao :IWorkDao
+    public class WorkDao :BaseDao, IWorkDao
     {
+        private static IDictionary<int, Work> Works;
+        private IList<Work> LoadInternal()
+        {
+            IList<Work> works = new List<Work>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT WorkID, Title, Copy, Description, ArtistID FROM WORK";
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            works.Add(LoadWork(reader));
+                        }
+                    }
+                }
+            }
+            return works;
+        }
         /// <summary>
         /// Получить определенную работу
         /// </summary>
@@ -18,31 +40,9 @@ namespace VRA.DataAccess
         /// <returns></returns>
         public Work Get(int id)
         {
-            //Получаем объект подключения к базе
-            using (var conn = GetConnection())
-            {
-                //Открываем соединение
-                conn.Open();
-                //Создаем sql команду
-                using (var cmd = conn.CreateCommand())
-                {
-                    //Задаём текст команды
-                    cmd.CommandText = "SELECT WorkID, Title, Copy, Description, ArtistID FROM WORK WHERE WorkID = @id";
-                    //Добавляем значение параметра
-                    cmd.Parameters.AddWithValue("@id", id);
-                    //Открываем SqlDataReader для чтения полученных в результате
-                    //выполнения запроса данных
-                    using (var dataReader = cmd.ExecuteReader())
-                    {
-                        //Если есть запись, то работаем с ней
-                        if (dataReader.Read())
-                        {
-                            return !dataReader.Read() ? null : LoadWork(dataReader);
-                        }
-                        return null;
-                    }
-                }
-            }
+            if (Works == null)
+                Load();
+            return Works.ContainsKey(id) ? Works[id] : null;
         }
         /// <summary>
         /// Получить все работы
@@ -161,6 +161,43 @@ namespace VRA.DataAccess
             work.Description = reader.GetString(reader.GetOrdinal("Description"));
             
             return work;
+        }
+        public IList<Work> Load()
+        {
+            Works = new Dictionary<int, Work>();
+            var works = LoadInternal();
+            foreach(var work in works)
+            {
+                Works.Add(work.WorkID, work);
+            }
+            return Works.Values.ToList();
+        }
+        public void Reset()
+        {
+            if (Works == null)
+                return;
+            Works.Clear();
+        }
+
+        public IEnumerable<Work> GetInGallery()
+        {
+            IList<Work> works = new List<Work>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT WorkID, ArtistID, Title, Copy, Description FROM WORK WHERE WorkID in (SELECT WorkID FROM TRANS WHERE CustomerID is NULL)";
+                    using (var datareader = cmd.ExecuteReader())
+                    {
+                        while(datareader.Read())
+                        {
+                            works.Add(LoadWork(datareader));
+                        }
+                    }
+                }
+            }
+            return works;
         }
     }
 }

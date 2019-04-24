@@ -21,25 +21,39 @@ namespace VRA
     /// </summary>
     public partial class AddWorkWindow : Window
     {
+        private readonly IList<ArtistDto> Artists = ProcessFactory.GetArtistProcess().GetList();
         private int _workid;
         public void Load(WorkDto work)
         {
             _workid = work.WorkID;
-            tbArtistID.Text = work.ArtistID.ToString() ;
+            
             tbCopy.Text = work.Copy;
             tbDescription.Text = work.Description;
             tbTitle.Text = work.Title;
+            if(work.Artist!=null)
+            {
+                foreach(ArtistDto Art in Artists)
+                {
+                    if(work.Artist.Id==Art.Id)
+                    {
+                        this.cbArtist.SelectedItem = Art;
+                        break;
+                    }
+                }
+            }
         }
         public AddWorkWindow()
         {
             InitializeComponent();
+            cbArtist.ItemsSource = (from A in Artists orderby A.Name select A);
+            cbArtist.SelectedIndex = 0;
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(tbArtistID.Text))
+            if (cbArtist==null)
             {
-                MessageBox.Show("Номер художника не должен быть пустым", "Проверка");
+                MessageBox.Show("Необходимо выбрать художника", "Проверка");
                 return;
             }
             if (string.IsNullOrEmpty(tbCopy.Text))
@@ -58,7 +72,7 @@ namespace VRA
                 return;
             }
             WorkDto work = new WorkDto();
-            work.ArtistID = Convert.ToInt32(tbArtistID.Text);
+            work.Artist = cbArtist.SelectedItem as ArtistDto;
             work.Title = tbTitle.Text;
             work.Copy = tbCopy.Text;
             work.Description = tbDescription.Text;

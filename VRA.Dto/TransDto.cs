@@ -38,10 +38,10 @@ namespace VRA.Dto
         /// <summary>
         /// Номер клиента
         /// </summary>
-        public int CustomerID { get; set; }
+        public CustomerDto Customer { get; set; }
         /// <summary>
         /// Номер работы художника
         /// </summary>
-        public int WorkID { get; set; }
+        public WorkDto Work { get; set; }
     }
 }

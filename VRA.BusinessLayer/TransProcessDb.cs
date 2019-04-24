@@ -11,7 +11,7 @@ namespace VRA.BusinessLayer
 {
     class TransProcessDb :ITransProcess
     {
-        private readonly ITransDao transDao;
+        private static ITransDao transDao = new TransDao();
         public TransProcessDb()
         {
             transDao = DaoFactory.GetTransDao();
@@ -33,7 +33,7 @@ namespace VRA.BusinessLayer
 
         public IList<TransDto> GetList()
         {
-            return DtoConverter.Convert(transDao.GetAll());
+            return DtoConverter.Convert(DaoFactory.GetTransDao().Load());
         }
 
         public void Update(TransDto trans)

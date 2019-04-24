@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Работы" Height="208.486" Width="327.294" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Номер художника" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="115"/>
-        <TextBox Name="tbArtistID" HorizontalAlignment="Left" Height="23" Margin="150,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
+        <Label Content="Художник" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="115"/>
+        <ComboBox Name="cbArtist" HorizontalAlignment="Left" Height="23" Margin="150,10,0,0" VerticalAlignment="Top" Width="157" ItemsSource="{Binding}" DisplayMemberPath="Name"/>
         <Label Content="Название" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="115"/>
         <TextBox Name="tbTitle" HorizontalAlignment="Left" Height="23" Margin="150,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
         <Label Content="Копия" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Width="115"/>

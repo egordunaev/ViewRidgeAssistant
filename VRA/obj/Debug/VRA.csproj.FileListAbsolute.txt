@@ -148,3 +148,5 @@ D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Deb
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddNationsWindow.baml
 C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerArtistIntWindow.g.cs
 C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerArtistIntWindow.baml
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerArtistIntWindow.g.cs
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerArtistIntWindow.baml

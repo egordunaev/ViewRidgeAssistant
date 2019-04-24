@@ -39,5 +39,6 @@ namespace VRA.DataAccess
         /// </summary>
         /// <param name=«id»>id удаляемой транзакции</param>
         void Delete(int id);
+        IList<Trans> Load();
     }
 }

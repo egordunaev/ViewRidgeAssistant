@@ -108,13 +108,13 @@ namespace VRA.BusinessLayer.Converters
                 return null;
             TransDto transDto = new TransDto();
             transDto.TransactionID = trans.TransactionID;
-            transDto.CustomerID = trans.CustomerID;
+            transDto.Customer = Convert(DaoFactory.GetCustomerDao().Get(trans.CustomerID));
             transDto.DateAcquired = trans.DateAcquired;
             transDto.AcquisitionPrice = trans.AcquisitionPrice;
             transDto.PurchaseDate = trans.PurchaseDate;
             transDto.SalesPrice = trans.SalesPrice;
             transDto.AskingPrice = trans.AskingPrice;
-            transDto.WorkID = trans.WorkID;
+            transDto.Work = Convert(DaoFactory.GetWorkDao().Get(trans.WorkID)); ;
             return transDto;
         }
         public static Trans Convert(TransDto transDto)
@@ -123,13 +123,13 @@ namespace VRA.BusinessLayer.Converters
                 return null;
             Trans trans = new Trans();
             trans.TransactionID = transDto.TransactionID;
-            trans.CustomerID = transDto.CustomerID;
+            trans.CustomerID = transDto.Customer.CustomerID;
             trans.DateAcquired = transDto.DateAcquired;
             trans.AcquisitionPrice = transDto.AcquisitionPrice;
             trans.PurchaseDate = transDto.PurchaseDate;
             trans.SalesPrice = transDto.SalesPrice;
             trans.AskingPrice = transDto.AskingPrice;
-            trans.WorkID = transDto.WorkID;
+            trans.WorkID = transDto.Work.WorkID;
             return trans;
 
         }
@@ -153,7 +153,7 @@ namespace VRA.BusinessLayer.Converters
                 return null;
             WorkDto workDto = new WorkDto();
             workDto.WorkID = work.WorkID;
-            workDto.ArtistID = work.ArtistID;
+            workDto.Artist = Convert(DaoFactory.GetArtistDao().Get(work.ArtistID));
             workDto.Title = work.Title;
             workDto.Copy = work.Copy;
             workDto.Description = work.Description;
@@ -165,7 +165,7 @@ namespace VRA.BusinessLayer.Converters
                 return null;
             Work work = new Work();
             work.WorkID = workDto.WorkID;
-            work.ArtistID = workDto.ArtistID;
+            work.ArtistID = workDto.Artist.Id;
             work.Title = workDto.Title;
             work.Copy = workDto.Copy;
             work.Description = workDto.Description;

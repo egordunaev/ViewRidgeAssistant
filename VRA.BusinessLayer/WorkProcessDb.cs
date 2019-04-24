@@ -11,7 +11,7 @@ namespace VRA.BusinessLayer
 {
     class WorkProcessDb : IWorkProcess
     {
-        private readonly IWorkDao workDao;
+        private static IWorkDao workDao;
         public WorkProcessDb()
         {
             workDao = DaoFactory.GetWorkDao();
@@ -33,7 +33,12 @@ namespace VRA.BusinessLayer
 
         public IList<WorkDto> GetList()
         {
-            return DtoConverter.Convert(workDao.GetAll());
+            return DtoConverter.Convert(DaoFactory.GetWorkDao().Load());
+        }
+
+        public IList<WorkDto> GetListInGallery()
+        {
+            return DtoConverter.Convert(workDao.GetInGallery());
         }
 
         public void Update(WorkDto work)

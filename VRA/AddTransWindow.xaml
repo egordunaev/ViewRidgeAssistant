@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="Транзакции" Height="296.429" Width="330.952" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Номер клиента" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="115"/>
-        <TextBox Name="tbCustomerID" HorizontalAlignment="Left" Height="23" Margin="150,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
-        <Label Content="Номер работы" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="115"/>
-        <TextBox Name="tbWorkID" HorizontalAlignment="Left" Height="23" Margin="150,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
+        <Label Content="Клиент" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="115"/>
+        <ComboBox Name="cbCustomer" HorizontalAlignment="Left" Height="23" Margin="150,10,0,0" VerticalAlignment="Top" Width="157"/>
+        <Label Content="Работа" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="115"/>
+        <ComboBox Name="cbWorkID" HorizontalAlignment="Left" Height="23" Margin="150,40,0,0"  VerticalAlignment="Top" Width="157"/>
         <Label Content="Дата покупки" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Width="115"/>
         <DatePicker Name="dpDateAcquired" HorizontalAlignment="Left" Margin="150,70,0,0" VerticalAlignment="Top" Width="157"/>
         <Label Content="Цена покупки" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="115"/>

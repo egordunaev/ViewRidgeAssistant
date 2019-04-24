@@ -30,6 +30,6 @@ namespace VRA.Dto
         /// <summary>
         /// Номер художника
         /// </summary>
-        public int ArtistID { get; set; }
+        public ArtistDto Artist { get; set; }
     }
 }

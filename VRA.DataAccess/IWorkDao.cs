@@ -39,5 +39,7 @@ namespace VRA.DataAccess
         /// </summary>
         /// <param name="id">номер работы</param>
         void Delete(int id);
+        IList<Work> Load();
+        IEnumerable<Work> GetInGallery();
     }
 }

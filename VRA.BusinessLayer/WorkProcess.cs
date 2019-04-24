@@ -39,6 +39,9 @@ namespace VRA.BusinessLayer
                 Works.Remove(id);
         }
 
-        
+        public IList<WorkDto> GetListInGallery()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

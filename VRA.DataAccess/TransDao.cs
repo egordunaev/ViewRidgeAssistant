@@ -9,8 +9,30 @@ using System.Configuration;
 
 namespace VRA.DataAccess
 {
-    public class TransDao : ITransDao
+    public class TransDao : BaseDao, ITransDao
     {
+        private static IDictionary<int, Trans> Transactions;
+        private IList<Trans> LoadInternal()
+        {
+            IList<Trans> transes = new List<Trans>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT DateAcquired, AcquisitionPrice,PurchaseDate,SalesPrice,AskingPrice, TransactionID,CustomerID,WorkID FROM TRANS";
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            transes.Add(LoadTrans(reader));
+                        }
+                    }
+                }
+            }
+            return transes;
+        }
         /// <summary>
         /// Получить определенную транзакцию
         /// </summary>
@@ -18,31 +40,9 @@ namespace VRA.DataAccess
         /// <returns></returns>
         public Trans Get(int id)
         {
-            //Получаем объект подключения к базе
-            using (var conn = GetConnection())
-            {
-                //Открываем соединение
-                conn.Open();
-                //Создаем sql команду
-                using (var cmd = conn.CreateCommand())
-                {
-                    //Задаём текст команды
-                    cmd.CommandText = "SELECT TransactionID, DateAcquired, AcquisitionPrice,PurchaseDate,SalesPrice,AskingPrice,CustomerID,WorkID FROM TRANS WHERE TransactionID = @id";
-                    //Добавляем значение параметра
-                    cmd.Parameters.AddWithValue("@id", id);
-                    //Открываем SqlDataReader для чтения полученных в результате
-                    //выполнения запроса данных
-                    using (var dataReader = cmd.ExecuteReader())
-                    {
-                        //Если есть запись, то работаем с ней
-                        if (dataReader.Read())
-                        {
-                            return !dataReader.Read() ? null : LoadTrans(dataReader);
-                        }
-                        return null;
-                    }
-                }
-            }
+            if (Transactions == null)
+                Load();
+            return Transactions.ContainsKey(id) ? Transactions[id] : null;
         }
         /// <summary>
         /// Получить все транзакции
@@ -181,6 +181,23 @@ namespace VRA.DataAccess
             artist.Nationality = reader.GetString(reader.GetOrdinal("Nationality"));
             */
             return trans;
+        }
+
+        public IList<Trans> Load()
+        {
+            Transactions = new Dictionary<int, Trans>();
+            var _transactions = LoadInternal();
+            foreach(var trans in _transactions)
+            {
+                Transactions.Add(trans.TransactionID, trans);
+            }
+            return Transactions.Values.ToList();
+        }
+        public void Reset()
+        {
+            if (Transactions == null)
+                return;
+            Transactions.Clear();
         }
     }
 }
