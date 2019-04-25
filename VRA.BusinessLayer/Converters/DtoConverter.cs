@@ -182,6 +182,17 @@ namespace VRA.BusinessLayer.Converters
             }
             return workDtos;
         }
+        public static IList<WorkDto> Convert(IEnumerable<Work> works)
+        {
+            if (works == null)
+                return null;
+            IList<WorkDto> workDtos = new List<WorkDto>();
+            foreach(var work in works)
+            {
+                workDtos.Add(Convert(work));
+            }
+            return workDtos;
+        }
         //
         // CUSTOMER_ARTIST_INT
         //

@@ -583,8 +583,8 @@ namespace VRA
             this.statusLabel.Content = "Работа с таблицей: Транзакции";
             //устанавливаем видимость кнопок управления записями таблицы
             this.btnAdd.Visibility = Visibility.Visible;
-            this.btnPurchase.Visibility = Visibility.Collapsed;
-            this.btnSale.Visibility = Visibility.Collapsed;
+            this.btnPurchase.Visibility = Visibility.Visible;
+            this.btnSale.Visibility = Visibility.Visible;
             this.btnEdit.Visibility = Visibility.Visible;
             this.btnDelete.Visibility = Visibility.Visible;
             this.btnRefresh.Visibility = Visibility.Visible;
@@ -650,6 +650,32 @@ namespace VRA
             this.btnRefresh_Click(sender, e);//загружаем данные в DateGrid
             this.statusLabel.Content = "Работа с таблицей: Национальности";
 
+        }
+
+        private void btnPurchase_Click(object sender, RoutedEventArgs e)
+        {
+            switch (status)
+            {
+                case "Trans":
+                    AddTransWindow window = new AddTransWindow {status = "purchase"};
+                    window.ShowDialog();
+                    btnRefreshT_Click(sender,e);
+                    break;
+                default: MessageBox.Show("Необходимо выбрать таблицу, Транзакции!"); return;
+            }
+        }
+
+        private void btnSale_Click(object sender, RoutedEventArgs e)
+        {
+            switch (status)
+            {
+                case "Trans":
+                    AddTransWindow window = new AddTransWindow { status = "sale" };
+                    window.ShowDialog();
+                    btnRefreshT_Click(sender,e);
+                    break;
+                default: MessageBox.Show("Необходимо выбрать таблицу, Транзакции!"); return;
+            }
         }
     }
 }

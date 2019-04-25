@@ -31,5 +31,16 @@ namespace VRA.Dto
         /// Номер художника
         /// </summary>
         public ArtistDto Artist { get; set; }
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+            WorkDto workItem = obj as WorkDto;
+            return workItem != null && workItem.WorkID.Equals(this.WorkID);
+        }
+        public override int GetHashCode()
+        {
+            return this.WorkID.GetHashCode();
+        }
     }
 }

@@ -22,6 +22,7 @@ namespace VRA
     public partial class AddWorkWindow : Window
     {
         private readonly IList<ArtistDto> Artists = ProcessFactory.GetArtistProcess().GetList();
+        private IList<WorkDto> FreeForSale = ProcessFactory.GetWorkProcess().GetList();
         private int _workid;
         public void Load(WorkDto work)
         {
@@ -42,6 +43,7 @@ namespace VRA
                 }
             }
         }
+        
         public AddWorkWindow()
         {
             InitializeComponent();
@@ -71,7 +73,33 @@ namespace VRA
                 MessageBox.Show("Название картины не должно быть пустым", "Проверка");
                 return;
             }
-            WorkDto work = new WorkDto();
+            WorkDto work = new WorkDto
+            {
+                Title = tbTitle.Text,
+                Copy = tbCopy.Text,
+                Description = tbDescription.Text,
+                Artist = (ArtistDto)this.cbArtist.SelectedItem
+            };
+            TransDto trans = new TransDto
+            {
+                AcquisitionPrice = Convert.ToDecimal(tbAcquisitionPrice.Text),
+                DateAcquired = Convert.ToDateTime(this.dpAquired.Text)
+            };
+            IWorkProcess workProcess = ProcessFactory.GetWorkProcess();
+            ITransProcess transProcess = ProcessFactory.GetTransProcess();
+            if(_workid==0)
+            {
+                workProcess.Add(work);
+                FreeForSale = ProcessFactory.GetWorkProcess().GetList();
+                trans.Work = FreeForSale.Last();
+                transProcess.Add(trans);
+            }
+            else
+            {
+                work.WorkID = _workid;
+                workProcess.Update(work);
+            }
+            /*WorkDto work = new WorkDto();
             work.Artist = cbArtist.SelectedItem as ArtistDto;
             work.Title = tbTitle.Text;
             work.Copy = tbCopy.Text;
@@ -85,7 +113,7 @@ namespace VRA
             {
                 work.WorkID = _workid;
                 workProcess.Update(work);
-            }
+            }*/
             Close();
         }
 

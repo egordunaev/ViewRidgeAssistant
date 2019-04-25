@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VRA"
         mc:Ignorable="d"
-        Title="Работы" Height="208.486" Width="327.294" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Работы" Height="254.968" Width="327.294" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Художник" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="115"/>
+        <Label Content="Автор" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="115"/>
         <ComboBox Name="cbArtist" HorizontalAlignment="Left" Height="23" Margin="150,10,0,0" VerticalAlignment="Top" Width="157" ItemsSource="{Binding}" DisplayMemberPath="Name"/>
         <Label Content="Название" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="115"/>
         <TextBox Name="tbTitle" HorizontalAlignment="Left" Height="23" Margin="150,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
@@ -15,7 +15,12 @@
         <TextBox Name="tbCopy" HorizontalAlignment="Left" Height="23" Margin="150,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
         <Label Content="Описание" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="115"/>
         <TextBox Name="tbDescription" HorizontalAlignment="Left" Height="23" Margin="150,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
-        <Button Name="btnSave" Content="Сохранить" HorizontalAlignment="Left" Margin="30,140,0,0" VerticalAlignment="Top" Width="120" Click="btnSave_Click"/>
-        <Button Name="btnCancel" Content="Отмена" HorizontalAlignment="Left" Margin="170,140,0,0" VerticalAlignment="Top" Width="120" Click="btnCancel_Click"/>
+        <Label Content="Дата приобретения" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="125"/>
+        <DatePicker x:Name="dpAquired" Margin="150,130,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="157"/>
+        <Label Content="Цена приобретения" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" Width="125"/>
+        <TextBox Name="tbAcquisitionPrice" HorizontalAlignment="Left" Height="23" Margin="150,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
+
+        <Button Name="btnSave" Content="Сохранить" HorizontalAlignment="Left" Margin="30,190,0,0" VerticalAlignment="Top" Width="120" Click="btnSave_Click"/>
+        <Button Name="btnCancel" Content="Отмена" HorizontalAlignment="Left" Margin="170,190,0,0" VerticalAlignment="Top" Width="120" Click="btnCancel_Click"/>
     </Grid>
 </Window>
