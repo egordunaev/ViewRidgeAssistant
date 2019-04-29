@@ -15,7 +15,7 @@ namespace VRA.DataAccess.Entities
         public decimal SalesPrice;
         public decimal AskingPrice;
         public int TransactionID;
-        public int CustomerID;
+        public int? CustomerID;
         public int WorkID;
     }
 }

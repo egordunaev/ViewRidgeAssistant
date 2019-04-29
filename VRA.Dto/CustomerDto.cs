@@ -14,7 +14,7 @@ namespace VRA.Dto
         /// <summary>
         /// номер клиента
         /// </summary>
-        public int CustomerID { get; set; }
+        public int? CustomerID { get; set; }
         /// <summary>
         /// Email клиента
         /// </summary>

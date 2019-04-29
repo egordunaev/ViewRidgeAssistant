@@ -35,8 +35,8 @@ namespace VRA.BusinessLayer
 
         public void Update(CustomerDto customer)
         {
-            if (Customers.ContainsKey(customer.CustomerID))
-                Customers[customer.CustomerID] = customer;
+            if (Customers.ContainsKey(customer.CustomerID.Value))
+                Customers[customer.CustomerID.Value] = customer;
         }
     }
 }

@@ -8,11 +8,11 @@
         Title="Транзакции" Height="323.642" Width="327.064" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
         <Label Content="Клиент" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="115"/>
-        <ComboBox Name="cbCustomer" HorizontalAlignment="Left" Height="23" Margin="150,10,0,0" VerticalAlignment="Top" Width="157" ItemsSource="{Binding}" DisplayMemberPath="Customer"/>
+        <ComboBox Name="cbCustomer" HorizontalAlignment="Left" Height="23" Margin="150,10,0,0" VerticalAlignment="Top" Width="157" ItemsSource="{Binding}" DisplayMemberPath="Name"/>
         <Label Content="Работа" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="115"/>
         <Label Content="Копия" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Width="115"/>
         <ComboBox Name="cbCopy" HorizontalAlignment="Left" Height="23" Margin="150,70,0,0"  VerticalAlignment="Top" Width="157" ItemsSource="{Binding}" DisplayMemberPath="Copy"/>
-        <ComboBox Name="cbWork" HorizontalAlignment="Left" Height="23" Margin="150,40,0,0"  VerticalAlignment="Top" Width="157" LostFocus="cbWork_LostFocus" SelectionChanged="cbWork_SelectionChanged" ItemsSource="{Binding}" DisplayMemberPath="Work"/>
+        <ComboBox Name="cbWork" HorizontalAlignment="Left" Height="23" Margin="150,40,0,0"  VerticalAlignment="Top" Width="157" LostFocus="cbWork_LostFocus" SelectionChanged="cbWork_SelectionChanged" ItemsSource="{Binding}" DisplayMemberPath="Title"/>
         <Label Content="Дата покупки" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="115"/>
         <DatePicker Name="dpAcuired" HorizontalAlignment="Left" Margin="150,100,0,0" VerticalAlignment="Top" Width="157"/>
         <Label Content="Цена покупки" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="115"/>

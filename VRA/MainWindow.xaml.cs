@@ -219,7 +219,7 @@ namespace VRA
             if (result != MessageBoxResult.Yes)
                 return;
             //Если все проверки пройдены и подтверждение получено, удаляем художника
-            ProcessFactory.GetCustomerArtistIntProcess().Delete(item.Customer.CustomerID,item.Artist.Id);
+            ProcessFactory.GetCustomerArtistIntProcess().Delete(item.Customer.CustomerID.Value,item.Artist.Id);
             //И перезагружаем список художников
             btnRefresh_Click(sender, e);
 
@@ -261,7 +261,7 @@ namespace VRA
             if (result != MessageBoxResult.Yes)
                 return;
             //Если все проверки пройдены и подтверждение получено, удаляем художника
-            ProcessFactory.GetCustomerProcess().Delete(item.CustomerID);
+            ProcessFactory.GetCustomerProcess().Delete(item.CustomerID.Value);
             //И перезагружаем список художников
             btnRefresh_Click(sender, e);
 

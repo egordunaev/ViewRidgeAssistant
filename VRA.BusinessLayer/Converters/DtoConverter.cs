@@ -108,7 +108,7 @@ namespace VRA.BusinessLayer.Converters
                 return null;
             TransDto transDto = new TransDto();
             transDto.TransactionID = trans.TransactionID;
-            transDto.Customer = Convert(DaoFactory.GetCustomerDao().Get(trans.CustomerID));
+            transDto.Customer = Convert(DaoFactory.GetCustomerDao().Get(trans.CustomerID.Value));
             transDto.DateAcquired = trans.DateAcquired;
             transDto.AcquisitionPrice = trans.AcquisitionPrice;
             transDto.PurchaseDate = trans.PurchaseDate;
@@ -123,7 +123,8 @@ namespace VRA.BusinessLayer.Converters
                 return null;
             Trans trans = new Trans();
             trans.TransactionID = transDto.TransactionID;
-            trans.CustomerID = transDto.Customer.CustomerID;
+            if(transDto.Customer.CustomerID.HasValue)
+                trans.CustomerID = transDto.Customer.CustomerID.Value;
             trans.DateAcquired = transDto.DateAcquired;
             trans.AcquisitionPrice = transDto.AcquisitionPrice;
             trans.PurchaseDate = transDto.PurchaseDate;
@@ -210,7 +211,7 @@ namespace VRA.BusinessLayer.Converters
             if (customerArtistIntDto == null)
                 return null;
             CustomerArtistInt customerArtistInt = new CustomerArtistInt();
-            customerArtistInt.CustomerID = customerArtistIntDto.Customer.CustomerID;
+            customerArtistInt.CustomerID = customerArtistIntDto.Customer.CustomerID.Value;
             customerArtistInt.ArtistID = customerArtistIntDto.Artist.Id;
             return customerArtistInt;
         }

@@ -38,8 +38,8 @@ namespace VRA.BusinessLayer
 
         public void Update(CustomerArtistIntDto customerArtistInt)
         {
-            if (CustomerArtistInts.ContainsKey(customerArtistInt.Customer.CustomerID) && CustomerArtistInts.ContainsKey(customerArtistInt.Artist.Id))
-                CustomerArtistInts[customerArtistInt.Customer.CustomerID] = customerArtistInt;
+            if (CustomerArtistInts.ContainsKey(customerArtistInt.Customer.CustomerID.Value) && CustomerArtistInts.ContainsKey(customerArtistInt.Artist.Id))
+                CustomerArtistInts[customerArtistInt.Customer.CustomerID.Value] = customerArtistInt;
         }
     }
 }

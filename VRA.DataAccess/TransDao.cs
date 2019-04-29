@@ -80,8 +80,8 @@ namespace VRA.DataAccess
                 conn.Open();
                 using (var cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO TRANS(TransactionID, DateAcquired, AcquisitionPrice,PurchaseDate,SalesPrice,AskingPrice,CustomerID,WorkID)VALUES(@TransactionID, @DateAcquired,  @AcquisitionPrice, @PurchaseDate, @SalesPrice, @AskingPrice, @CustomerID, @WorkID)";
-                    cmd.Parameters.AddWithValue("@TransactionID", trans.TransactionID);
+                    cmd.CommandText = "INSERT INTO TRANS(DateAcquired, AcquisitionPrice,PurchaseDate,SalesPrice,AskingPrice,CustomerID,WorkID)VALUES(@DateAcquired,  @AcquisitionPrice, @PurchaseDate, @SalesPrice, @AskingPrice, @CustomerID, @WorkID)";
+                    
                     cmd.Parameters.AddWithValue("@DateAcquired", trans.DateAcquired);
                     cmd.Parameters.AddWithValue("@AcquisitionPrice", trans.AcquisitionPrice);
                     cmd.Parameters.AddWithValue("@PurchaseDate", trans.PurchaseDate);

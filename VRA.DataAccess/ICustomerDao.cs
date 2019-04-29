@@ -18,7 +18,7 @@ namespace VRA.DataAccess
         /// </summary>
         /// <param name="id">Номер клиента</param>
         /// <returns></returns>
-        Customer Get(int id);
+        Customer Get(int? id);
         /// <summary>
         /// Получить список всех клиентов в базе
         /// </summary>

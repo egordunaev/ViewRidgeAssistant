@@ -38,11 +38,11 @@ namespace VRA.DataAccess
         /// </summary>
         /// <param name="id">Номер клиента</param>
         /// <returns></returns>
-        public Customer Get(int id)
+        public Customer Get(int? id)
         {
             if (Customers == null)
                 Load();
-            return Customers.ContainsKey(id) ? Customers[id] : null;
+            return Customers.ContainsKey(id.Value) ? Customers[id.Value] : null;
         }
         /// <summary>
         /// Получить всех клиентов.
@@ -191,7 +191,7 @@ namespace VRA.DataAccess
             var customers = LoadInternal();
             foreach(var customer in customers)
             {
-                Customers.Add(customer.CustomerID, customer);
+                Customers.Add(customer.CustomerID.Value, customer);
             }
             return Customers.Values.ToList();
         }

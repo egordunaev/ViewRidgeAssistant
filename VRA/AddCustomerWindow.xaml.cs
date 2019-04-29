@@ -21,7 +21,7 @@ namespace VRA
     /// </summary>
     public partial class AddCustomerWindow : Window
     {
-        private int _customerid;
+        private int? _customerid;
         public void Load(CustomerDto customer)
         {
             _customerid = customer.CustomerID;

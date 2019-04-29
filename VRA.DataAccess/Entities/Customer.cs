@@ -9,7 +9,7 @@ namespace VRA.DataAccess.Entities
 {
     public class Customer
     {
-        public int CustomerID;
+        public int? CustomerID;
         public string Email;
         public string Name;
         public string AreaCode;
