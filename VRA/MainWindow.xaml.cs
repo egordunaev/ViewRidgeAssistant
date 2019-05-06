@@ -677,5 +677,10 @@ namespace VRA
                 default: MessageBox.Show("Необходимо выбрать таблицу, Транзакции!"); return;
             }
         }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
