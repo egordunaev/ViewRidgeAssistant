@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\App.xaml
-8794590736
+102105697305
 
-12912934496
-15612514988
-AddArtistWindow.xaml;AddCustomerArtistIntWindow.xaml;AddCustomerWindow.xaml;AddNationsWindow.xaml;AddTransWindow.xaml;AddWorkWindow.xaml;MainWindow.xaml;SettingsWindow.xaml;
+141193918092
+22-596153584
+AddArtistWindow.xaml;AddCustomerArtistIntWindow.xaml;AddCustomerWindow.xaml;AddNationsWindow.xaml;AddTransWindow.xaml;AddWorkWindow.xaml;MainWindow.xaml;ReportWindow.xaml;SearchWindow.xaml;SettingsWindow.xaml;
 
 False
 

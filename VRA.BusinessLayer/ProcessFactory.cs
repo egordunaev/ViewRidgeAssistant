@@ -40,6 +40,13 @@ namespace VRA.BusinessLayer
         public static INationProcess GetNationProcess()
         {
             return new NationProcess();
-        }
+        }        public static IReportGenerator GetReport()
+        {
+            return new ReportGenerator();
+        }
+        public static IReportItemProcess GetReportProcess()
+        {
+            return new ReportItemProcess();
+        }
     }
 }

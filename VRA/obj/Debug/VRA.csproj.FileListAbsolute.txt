@@ -150,3 +150,9 @@ C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerArti
 C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerArtistIntWindow.baml
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerArtistIntWindow.g.cs
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\AddCustomerArtistIntWindow.baml
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\SearchWindow.g.cs
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\SearchWindow.baml
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\bin\Debug\EPPlus.dll
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\bin\Debug\EPPlus.xml
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\ReportWindow.g.cs
+D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\ReportWindow.baml

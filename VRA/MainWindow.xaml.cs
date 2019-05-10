@@ -14,6 +14,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using VRA.BusinessLayer;
 using VRA.Dto;
+using Microsoft.Win32;
+using System.IO;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
 
 namespace VRA
 {
@@ -680,7 +684,76 @@ namespace VRA
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
+            SearchWindow search = new SearchWindow(status);
+            {
+                switch (status)
+                {
+                    case "Artist":
+                        search.ShowDialog();
+                        if (search.exec)
+                        {
+                            this.dgArtists.ItemsSource = search.FindedArtists;
+                        }
+                        break;
+                    case "Customer":
+                        search.ShowDialog();
+                        if (search.exec)
+                        {
+                            this.dgCustomers.ItemsSource = search.FindedCustomers;
+                        }
+                        break;
+                    default: MessageBox.Show("Для поиска необходимо выбрать таблицу!"); break;
+                }
+            }
+        }
 
+        private void ExcelExporterButton_Click(object sender, RoutedEventArgs e)
+        {
+            List<object> grid = null;
+            switch (status)
+            {
+                case "Customer":
+                    grid = this.dgCustomers.ItemsSource.Cast<object>().ToList();
+                    break;
+                case "Artist":
+                    grid = this.dgArtists.ItemsSource.Cast<object>().ToList();
+                    break;
+                case "Work":
+                    grid = this.dgWork.ItemsSource.Cast<object>().ToList();
+                    break;
+                case "Trans":
+                    grid = this.dgTrans.ItemsSource.Cast<object>().ToList();
+                    break;
+                case "Interests":
+                    grid = this.dgInterests.ItemsSource.Cast<object>().ToList();
+                    break;
+                case "Nations":
+                    grid = this.dgNations.ItemsSource.Cast<object>().ToList();
+                    break;
+            }
+
+
+            SaveFileDialog saveXlsxDialog = new SaveFileDialog
+            {
+                DefaultExt = ".xlsx",
+                Filter = "Excel Files(.xlsx)|*.xlsx",
+                AddExtension = true,
+                FileName = status
+            };
+
+            bool? result = saveXlsxDialog.ShowDialog();
+            if (result == true)
+            {
+                FileInfo xlsxFile = new FileInfo(saveXlsxDialog.FileName);
+
+                ProcessFactory.GetReport().fillExcelTableByType(grid, status, xlsxFile);
+            }
+        }
+
+        private void GraphReportButton_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new ReportWindow();
+            window.Show();
         }
     }
 }

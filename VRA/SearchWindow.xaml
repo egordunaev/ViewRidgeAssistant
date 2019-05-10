@@ -32,6 +32,32 @@
                     </StackPanel>
                 </Grid>
             </TabItem>
+            <TabItem x:Name ="sCustomer" Header="Поиск Клиента">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="19.699" />
+                        <ColumnDefinition Width="19.301"/>
+                        <ColumnDefinition Width="115*" />
+                        <ColumnDefinition Width="631*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column ="0" Margin="3" Text="Имя " Grid.ColumnSpan="2"/>
+                    <TextBlock Grid.Row="2" Grid.Column ="0" Margin ="0,5,6,8" Text="E-mail" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                    <TextBox Name="CustomerName" Grid.Row ="0" Grid.Column="2" Margin="3,3,0,3" Width="200" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+                    <StackPanel Grid.Row="3" Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,6,0,0">
+                        <Button x:Name ="btnSearchCustomer" Content="Принять" Margin="3" Width="70" Click="SearchCustomer" />
+                        <Button x:Name ="btnCancelCustomer" Content="Отмена" Margin="3" Width="70" Click="CloseForm"/>
+                    </StackPanel>
+                    <TextBox x:Name="Email" Grid.Row ="2" Grid.Column="2" Margin="3,4,0,17" Width="200" HorizontalAlignment="Left" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                </Grid>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>

@@ -67,7 +67,7 @@
         <Button Name ="btnEdit" Content="Изменить" HorizontalAlignment="Left" Margin="6,6,0,0" VerticalAlignment="Top" Width="60" Click="btnEdit_Click" Height="50" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"/>
         <Button FontSize="8" Name="btnDataBase" Content="Подключение" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Top" Width="60" Click="btnDataBase_Click" Height="52" Grid.Column="2" Grid.Row="4"/>
         <Button FontSize="8" Name="btnPurchase" Content="Покупки" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Top" Width="60"  Height="52" Grid.Column="2" Grid.Row="5" Click="btnPurchase_Click"/>
-        <Button FontSize="8" Name="btnSearch" Content="Поиск" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Top" Width="60"  Height="52" Grid.Column="2" Grid.Row="6" Click="btnSearch_Click"/>
+        <Button FontSize="8" Name="btnSearch" Content="Поиск" HorizontalAlignment="Left" Margin="6,0,0,8" VerticalAlignment="Bottom" Width="60"  Height="52" Grid.Column="2" Grid.Row="6" Click="btnSearch_Click"/>
         <Button FontSize="8" Name="btnSale" Content="Продажи" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Top" Width="60"  Height="52" Grid.Column="2" Grid.Row="7" Click="btnSale_Click"/>
 
 
@@ -76,7 +76,8 @@
                 <MenuItem Name="dataBaseS" Header="Настроить соединение с базой данных" Click="btn_DataBase_Click"></MenuItem>
             </MenuItem>
             <MenuItem Name="Reports" Header="Отчеты">
-                <MenuItem Name="ExcelExporterButton" Header="Экспорт таблицы Excel"/>
+                <MenuItem Name="ExelExporterButton" Header="Экспорт таблицы Excel" Click="ExcelExporterButton_Click" />
+                <MenuItem Name="GraphReportButton" Header="Отчет по продажам" Click="GraphReportButton_Click"/>
             </MenuItem>
             <MenuItem Name="About" Header="О программе"></MenuItem>
         </Menu>

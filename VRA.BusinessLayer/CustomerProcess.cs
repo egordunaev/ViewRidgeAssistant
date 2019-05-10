@@ -33,6 +33,11 @@ namespace VRA.BusinessLayer
             return new List<CustomerDto>(Customers.Values);
         }
 
+        public IList<CustomerDto> SearchCustomer(string Name, string Email)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(CustomerDto customer)
         {
             if (Customers.ContainsKey(customer.CustomerID.Value))

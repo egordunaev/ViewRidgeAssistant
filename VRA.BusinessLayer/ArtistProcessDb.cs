@@ -39,5 +39,10 @@ namespace VRA.BusinessLayer
         {
             artistDao.Delete(id);
         }
+
+        public IList<ArtistDto> SearchArtist(string Name, string Nation)
+        {
+            return DtoConverter.Convert(_artistDao.SearchArtists(Name, Nation));
+        }
     }
 }

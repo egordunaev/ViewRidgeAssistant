@@ -201,5 +201,28 @@ namespace VRA.DataAccess
                 return;
             Customers.Clear();
         }
+
+        public IList<Customer> SearchCustomers(string Name, string Email)
+        {
+            IList<Customer> customers = new List<Customer>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT CustomerID, Email, Name, AreaCode, HouseNumber, Street, City, Region, ZipPostalCode, Country, PhoneNumber FROM CUSTOMER WHERE Email like @Email AND Name like @Name";
+                    cmd.Parameters.AddWithValue("@Name", "%" + Name + "%");
+                    cmd.Parameters.AddWithValue("@Email", "%" + Email + "%");
+                    using (var dataReader = cmd.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            customers.Add(LoadCustomer(dataReader));
+                        }
+                    }
+                }
+            }
+            return customers;
+        }
     }
 }

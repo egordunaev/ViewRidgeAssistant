@@ -37,6 +37,11 @@ namespace VRA.BusinessLayer
             return DtoConverter.Convert(DaoFactory.GetCustomerDao().Load());
         }
 
+        public IList<CustomerDto> SearchCustomer(string Name, string Email)
+        {
+            return DtoConverter.Convert(customerDao.SearchCustomers(Name, Email));
+        }
+
         public void Update(CustomerDto customer)
         {
             customerDao.Update(DtoConverter.Convert(customer));

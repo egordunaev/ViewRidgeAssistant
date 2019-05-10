@@ -256,5 +256,30 @@ namespace VRA.BusinessLayer.Converters
             }
             return nations;
         }
+        // 
+        // REPORT
+        //
+        private static ReportItemDto Convert(Report report)
+        {
+            if (report == null) { return null; }
+            ReportItemDto reportdto = new ReportItemDto
+            {
+                date = report.date.ToString(),
+                count =
+           report.count,
+                price = report.price
+            };
+            return reportdto;
+        }
+        public static IList<ReportItemDto> Convert(IEnumerable<Report> reports)
+        {
+            if (reports == null) { return null; }
+            IList<ReportItemDto> ReportsDto = new List<ReportItemDto>();
+            foreach (var r in reports)
+            {
+                ReportsDto.Add(Convert(r));
+            }
+            return ReportsDto;
+        }
     }
 }

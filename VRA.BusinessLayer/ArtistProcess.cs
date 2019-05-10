@@ -33,6 +33,11 @@ namespace VRA.BusinessLayer
         {
             if (Artists.ContainsKey(id))
                 Artists.Remove(id);
-        }
+        }
+
+        public IList<ArtistDto> SearchArtist(string Name, string Nation)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

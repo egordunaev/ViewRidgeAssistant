@@ -38,6 +38,7 @@ namespace VRA.BusinessLayer
         /// </summary>
         /// <param name="id">Номер клиента</param>
         void Delete(int id);
-        
+        IList<CustomerDto> SearchCustomer(string Name, string Email);
+
     }
 }

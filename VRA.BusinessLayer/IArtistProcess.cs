@@ -37,6 +37,8 @@ namespace VRA.BusinessLayer
         /// Удаляет художника
         /// </summary>
         /// <param name=«id»>id художника, которого надо удалить</param>
-        void Delete(int id);        
+        void Delete(int id);
+        IList<ArtistDto> SearchArtist(string Name, string Nation);
+
     }
 }

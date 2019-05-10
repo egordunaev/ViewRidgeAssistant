@@ -40,5 +40,6 @@ namespace VRA.DataAccess
         /// <param name=«id»>id удаляемого художника</param>
         void Delete(int id);
         IList<Artist> Load();
+        IList<Artist> SearchArtists(string Name, string Nation);
     }
 }
