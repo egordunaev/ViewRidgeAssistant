@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VRA"
         mc:Ignorable="d"
-        Title="Поиск" Height="187.156" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Поиск" Height="224.656" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <TabControl>
             <TabItem x:Name ="sArtist" Header="Поиск Художника">
@@ -56,6 +56,32 @@
                         <Button x:Name ="btnCancelCustomer" Content="Отмена" Margin="3" Width="70" Click="CloseForm"/>
                     </StackPanel>
                     <TextBox x:Name="Email" Grid.Row ="2" Grid.Column="2" Margin="3,4,0,17" Width="200" HorizontalAlignment="Left" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name ="sTrans" Header="Поиск Транзакций">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <RadioButton Name="ClientSearch" Content="Поиск по клиенту" Grid.Row="0" Grid.Column="0" Height="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+                    
+                    <RadioButton Name="ArtistSearch" Content="Поиск по художнику" Grid.Row="1" Grid.Column="0" Height="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+                    <RadioButton Name="SalesSearch" Content="Поиск по продажам" Grid.Row="2" Grid.Column="0" Height="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+                    <RadioButton Name="SaleDateSearch" Content="Дата продажи с" Grid.Row="3" Grid.Column="0" Height="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+                    <RadioButton Name="PurchaseDateSearch" Content="Дата покупки с" Grid.Row="4" Grid.Column="0" Height="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+                    <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button x:Name ="btnSearchTrans" Content="Принять" Margin="3" Width="70" />
+                        <Button x:Name ="btnCancelTrans" Content="Отмена" Margin="3" Width="70" />
+                    </StackPanel>
                 </Grid>
             </TabItem>
         </TabControl>

@@ -53,3 +53,5 @@ C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\V
 C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.BusinessLayer\obj\Debug\VRA.BusinessLayer.pdb
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\EPPlus.dll
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\EPPlus.xml
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\EPPlus.dll
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA.BusinessLayer\bin\Debug\EPPlus.xml

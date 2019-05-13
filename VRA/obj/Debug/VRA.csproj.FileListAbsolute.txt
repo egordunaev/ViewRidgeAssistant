@@ -156,3 +156,9 @@ D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\bin\Deb
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\bin\Debug\EPPlus.xml
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\ReportWindow.g.cs
 D:\_DEV\Visual Studio\Projects\ViewRidgeAssistant\ViewRidgeAssistant\VRA\obj\Debug\ReportWindow.baml
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\bin\Debug\EPPlus.dll
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\bin\Debug\EPPlus.xml
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\ReportWindow.g.cs
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\SearchWindow.g.cs
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\ReportWindow.baml
+C:\Users\dk310\Documents\GitHub\ViewRidgeAssistant\VRA\obj\Debug\SearchWindow.baml
