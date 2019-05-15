@@ -35,5 +35,9 @@ namespace VRA.DataAccess
         {
             return new NationDao();
         }
+        public static IWorkInGalleryDao GetWorkInGalleryDao()
+        {
+            return new WorkInGalleryDao();
+        }
     }
 }

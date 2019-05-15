@@ -49,6 +49,7 @@
     <Compile Include="ReportItemDto.cs" />
     <Compile Include="TransDto.cs" />
     <Compile Include="WorkDto.cs" />
+    <Compile Include="WorkInGalleryDto.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

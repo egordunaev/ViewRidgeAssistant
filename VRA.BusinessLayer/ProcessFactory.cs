@@ -48,5 +48,9 @@ namespace VRA.BusinessLayer
         {
             return new ReportItemProcess();
         }
+        public static IWorkInGalleryProcess GetWorkInGalleryProcess()
+        {
+            return new WorkInGalleryProcessDb();
+        }
     }
 }

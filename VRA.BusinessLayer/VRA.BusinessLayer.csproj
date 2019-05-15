@@ -64,6 +64,7 @@
     <Compile Include="IReportItemProcess.cs" />
     <Compile Include="ISettingsProcess.cs" />
     <Compile Include="ITransProcess.cs" />
+    <Compile Include="IWorkInGalleryProcess.cs" />
     <Compile Include="IWorkProcess.cs" />
     <Compile Include="NationProcess.cs" />
     <Compile Include="ProcessFactory.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="SettingsProcess.cs" />
     <Compile Include="TransProcessDb.cs" />
     <Compile Include="TransProcess.cs" />
+    <Compile Include="WorkInGalleryProcessDb.cs" />
     <Compile Include="WorkProcess.cs" />
     <Compile Include="WorkProcessDb.cs" />
   </ItemGroup>

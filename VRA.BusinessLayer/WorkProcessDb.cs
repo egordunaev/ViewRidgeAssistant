@@ -9,7 +9,7 @@ using VRA.BusinessLayer.Converters;
 
 namespace VRA.BusinessLayer
 {
-    class WorkProcessDb : IWorkProcess
+    public class WorkProcessDb : IWorkProcess
     {
         private static IWorkDao workDao;
         public WorkProcessDb()

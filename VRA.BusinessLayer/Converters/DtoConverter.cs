@@ -281,5 +281,30 @@ namespace VRA.BusinessLayer.Converters
             }
             return ReportsDto;
         }
+        //
+        // WORKS IN GALLERY
+        //
+        private static WorkInGalleryDto Convert(WorkInGallery workInGallery)
+        {
+            if (workInGallery == null)
+                return null;
+            WorkInGalleryDto workInGalleryDto = new WorkInGalleryDto();
+            workInGalleryDto.Id = workInGallery.Id;
+            workInGalleryDto.Title = workInGallery.Title;
+            workInGalleryDto.Copy = workInGallery.Copy;
+            workInGalleryDto.Name = workInGallery.Name;
+            workInGalleryDto.AskingPrice = workInGallery.AskingPrice;
+            workInGalleryDto.Description = workInGallery.Description;
+            return workInGalleryDto;
+        }
+        public static IList<WorkInGalleryDto> Convert(IList<WorkInGallery> workInGalleries)
+        {
+            var worksInGallery = new List<WorkInGalleryDto>();
+            foreach(var work in workInGalleries)
+            {
+                worksInGallery.Add(Convert(work));
+            }
+            return worksInGallery;
+        }
     }
 }
