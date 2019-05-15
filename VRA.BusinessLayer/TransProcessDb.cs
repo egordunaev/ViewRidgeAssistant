@@ -40,5 +40,9 @@ namespace VRA.BusinessLayer
         {
             transDao.Update(DtoConverter.Convert(trans));
         }
+        public IList<TransDto> SearchTransaction(string CustomerName, string ArtistName, decimal SalesPrice, string START_Purchase, string STOP_Purchase, string START_Acquisition, string STOP_Acquisition)
+        {
+            return DtoConverter.Convert(transDao.SearchTransaction(CustomerName, ArtistName, SalesPrice, START_Purchase, STOP_Purchase, START_Acquisition, STOP_Acquisition));
+        }
     }
 }

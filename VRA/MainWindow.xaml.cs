@@ -702,6 +702,13 @@ namespace VRA
                             this.dgCustomers.ItemsSource = search.FindedCustomers;
                         }
                         break;
+                    case "Trans":
+                        search.ShowDialog();
+                        if(search.exec)
+                        {
+                            this.dgTrans.ItemsSource = search.FoundTransactions;
+                        }
+                        break;
                     default: MessageBox.Show("Для поиска необходимо выбрать таблицу!"); break;
                 }
             }

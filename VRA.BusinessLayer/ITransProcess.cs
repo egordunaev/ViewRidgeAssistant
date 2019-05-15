@@ -38,5 +38,6 @@ namespace VRA.BusinessLayer
         /// </summary>
         /// <param name="id">Номер транзакции</param>
         void Delete(int id);
+        IList<TransDto> SearchTransaction(string CustomerName, string ArtistName, decimal SalesPrice, string START_Purchase, string STOP_Purchase, string START_Acquisition, string STOP_Acquisition);
     }
 }

@@ -199,5 +199,43 @@ namespace VRA.DataAccess
                 return;
             Transactions.Clear();
         }
+        /// <summary>
+        /// Поиск транзакции
+        /// </summary>
+        /// <param name="CustomerName">Имя клиента</param>
+        /// <param name="ArtistName">Имя художника</param>
+        /// <param name="SalesPrice">Цена продажи</param>
+        /// <param name="START_Purchase">Дата продажи С</param>
+        /// <param name="STOP_Purchase">Дата продажи ПО</param>
+        /// <param name="START_Acquisition">Дата покупки С</param>
+        /// <param name="STOP_Acquisition">Дата покупки ПО</param>
+        /// <returns></returns>
+        public IList<Trans> SearchTransaction(string CustomerName, string ArtistName, decimal SalesPrice, string START_Purchase, string STOP_Purchase, string START_Acquisition, string STOP_Acquisition)
+        {
+            IList<Trans> trans =new List<Trans>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "select T.TransactionID, C.CustomerID, W.WorkID, A.Name, T.DateAcquired, T.AcquisitionPrice, T.PurchaseDate, T.SalesPrice, T.AskingPrice FROM TRANS T JOIN CUSTOMER C on T.CustomerID=C.CustomerID JOIN WORK W on T.WorkID=W.WorkID JOIN ARTIST A on W.ArtistID=A.ArtistID WHERE C.Name like @CUSTOMERNAME AND A.Name like @ARTISTNAME AND T.SalesPrice like @SALESPRICE AND (T.PurchaseDate BETWEEN @STARTPURCHASE AND @STOPPURCHASE) AND (T.DateAcquired BETWEEN @STARTACQUISITION AND @STOPACQUISITION)";
+                    cmd.Parameters.AddWithValue("@CUSTOMERNAME","%"+CustomerName+"%");
+                    cmd.Parameters.AddWithValue("@ARTISTNAME", "%" + ArtistName + "%");
+                    cmd.Parameters.AddWithValue("@SALESPRICE", "%" + SalesPrice + "%");
+                    cmd.Parameters.AddWithValue("@STARTPURCHASE", START_Purchase);
+                    cmd.Parameters.AddWithValue("@STOPPURCHASE", STOP_Purchase);
+                    cmd.Parameters.AddWithValue("@STARTACQUISITION", START_Acquisition);
+                    cmd.Parameters.AddWithValue("@STOPACQUISITION", STOP_Acquisition);
+                    using (var dataReader = cmd.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            trans.Add(LoadTrans(dataReader));
+                        }
+                    }
+                }
+            }
+            return trans;
+        }
     }
 }
