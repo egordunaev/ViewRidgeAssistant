@@ -200,16 +200,141 @@ namespace VRA.DataAccess
             Transactions.Clear();
         }
         /// <summary>
-        /// Поиск транзакции
+        /// Поиск транзакции по Клиенту
         /// </summary>
         /// <param name="CustomerName">Имя клиента</param>
-        /// <param name="ArtistName">Имя художника</param>
-        /// <param name="SalesPrice">Цена продажи</param>
-        /// <param name="START_Purchase">Дата продажи С</param>
-        /// <param name="STOP_Purchase">Дата продажи ПО</param>
-        /// <param name="START_Acquisition">Дата покупки С</param>
-        /// <param name="STOP_Acquisition">Дата покупки ПО</param>
         /// <returns></returns>
+        public IList<Trans> SearchTransactionCustomer(string CustomerName)
+        {
+            IList<Trans> trans = new List<Trans>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "select T.TransactionID, C.CustomerID, W.WorkID, A.Name, T.DateAcquired, T.AcquisitionPrice, T.PurchaseDate, T.SalesPrice, T.AskingPrice FROM TRANS T JOIN CUSTOMER C on T.CustomerID=C.CustomerID JOIN WORK W on T.WorkID=W.WorkID JOIN ARTIST A on W.ArtistID=A.ArtistID WHERE C.Name like @CUSTOMERNAME";
+                    cmd.Parameters.AddWithValue("@CUSTOMERNAME", "%" + CustomerName + "%");
+                    using (var dataReader = cmd.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            trans.Add(LoadTrans(dataReader));
+                        }
+                    }
+                }
+            }
+            return trans;
+        }
+        /// <summary>
+        /// Поиск транзакции по Художнику
+        /// </summary>
+        /// <param name="ArtistName">Имя художника</param>
+        /// <returns></returns>
+        public IList<Trans> SearchTransactionArtist(string ArtistName)
+        {
+            IList<Trans> trans = new List<Trans>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "select T.TransactionID, C.CustomerID, W.WorkID, A.Name, T.DateAcquired, T.AcquisitionPrice, T.PurchaseDate, T.SalesPrice, T.AskingPrice FROM TRANS T JOIN CUSTOMER C on T.CustomerID=C.CustomerID JOIN WORK W on T.WorkID=W.WorkID JOIN ARTIST A on W.ArtistID=A.ArtistID WHERE A.Name like @ARTISTNAME";
+                    cmd.Parameters.AddWithValue("@ARTISTNAME", "%" + ArtistName + "%");
+                    using (var dataReader = cmd.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            trans.Add(LoadTrans(dataReader));
+                        }
+                    }
+                }
+            }
+            return trans;
+        }
+        /// <summary>
+        /// Поиск транзакции по Цене продажи
+        /// </summary>
+        /// <param name="SalesPrice">Цена продажи</param>
+        /// <returns></returns>
+        public IList<Trans> SearchTransactionSalesPrice(decimal SalesPrice)
+        {
+            IList<Trans> trans = new List<Trans>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "select T.TransactionID, C.CustomerID, W.WorkID, A.Name, T.DateAcquired, T.AcquisitionPrice, T.PurchaseDate, T.SalesPrice, T.AskingPrice FROM TRANS T JOIN CUSTOMER C on T.CustomerID=C.CustomerID JOIN WORK W on T.WorkID=W.WorkID JOIN ARTIST A on W.ArtistID=A.ArtistID WHERE T.SalesPrice like @SALESPRICE";
+                    cmd.Parameters.AddWithValue("@SALESPRICE", SalesPrice);
+                    using (var dataReader = cmd.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            trans.Add(LoadTrans(dataReader));
+                        }
+                    }
+                }
+            }
+            return trans;
+        }
+        /// <summary>
+        /// Поиск транзакции по Дате продажи
+        /// </summary>
+        /// <param name="START_Purchase">Начало периода</param>
+        /// <param name="STOP_Purchase">Конец периода</param>
+        /// <returns></returns>
+        public IList<Trans> SearchTransactionPurchase(string START_Purchase, string STOP_Purchase)
+        {
+            IList<Trans> trans = new List<Trans>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "select T.TransactionID, C.CustomerID, W.WorkID, A.Name, T.DateAcquired, T.AcquisitionPrice, T.PurchaseDate, T.SalesPrice, T.AskingPrice FROM TRANS T JOIN CUSTOMER C on T.CustomerID=C.CustomerID JOIN WORK W on T.WorkID=W.WorkID JOIN ARTIST A on W.ArtistID=A.ArtistID WHERE T.PurchaseDate BETWEEN @STARTPURCHASE AND @STOPPURCHASE";
+                    cmd.Parameters.AddWithValue("@STARTPURCHASE", START_Purchase);
+                    cmd.Parameters.AddWithValue("@STOPPURCHASE", STOP_Purchase);
+                    using (var dataReader = cmd.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            trans.Add(LoadTrans(dataReader));
+                        }
+                    }
+                }
+            }
+            return trans;
+        }
+        /// <summary>
+        /// Поиск транзакции по Дате 
+        /// </summary>
+        /// <param name="START_Acquisition">Начало периода</param>
+        /// <param name="STOP_Acquisition">Конец периода</param>
+        /// <returns></returns>
+        public IList<Trans> SearchTransactionAcquisition(string START_Acquisition, string STOP_Acquisition)
+        {
+            IList<Trans> trans = new List<Trans>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "select T.TransactionID, C.CustomerID, W.WorkID, A.Name, T.DateAcquired, T.AcquisitionPrice, T.PurchaseDate, T.SalesPrice, T.AskingPrice FROM TRANS T JOIN CUSTOMER C on T.CustomerID=C.CustomerID JOIN WORK W on T.WorkID=W.WorkID JOIN ARTIST A on W.ArtistID=A.ArtistID WHERE T.DateAcquired BETWEEN @STARTACQUISITION AND @STOPACQUISITION";
+                    cmd.Parameters.AddWithValue("@STARTACQUISITION", START_Acquisition);
+                    cmd.Parameters.AddWithValue("@STOPACQUISITION", STOP_Acquisition);
+                    using (var dataReader = cmd.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            trans.Add(LoadTrans(dataReader));
+                        }
+                    }
+                }
+            }
+            return trans;
+        }
+
+        /*
         public IList<Trans> SearchTransaction(string CustomerName, string ArtistName, decimal SalesPrice, string START_Purchase, string STOP_Purchase, string START_Acquisition, string STOP_Acquisition)
         {
             IList<Trans> trans =new List<Trans>();
@@ -236,6 +361,6 @@ namespace VRA.DataAccess
                 }
             }
             return trans;
-        }
+        } */
     }
 }

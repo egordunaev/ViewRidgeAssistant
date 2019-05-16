@@ -36,13 +36,38 @@ namespace VRA.BusinessLayer
             return DtoConverter.Convert(DaoFactory.GetTransDao().Load());
         }
 
+        public IList<TransDto> SearchTransactionAcquisition(string START_Acquisition, string STOP_Acquisition)
+        {
+            return DtoConverter.Convert(transDao.SearchTransactionAcquisition(START_Acquisition, STOP_Acquisition));
+        }
+
+        public IList<TransDto> SearchTransactionArtist(string ArtistName)
+        {
+            return DtoConverter.Convert(transDao.SearchTransactionArtist(ArtistName));
+        }
+
+        public IList<TransDto> SearchTransactionCustomer(string CustomerName)
+        {
+            return DtoConverter.Convert(transDao.SearchTransactionCustomer(CustomerName));
+        }
+
+        public IList<TransDto> SearchTransactionPurchase(string START_Purchase, string STOP_Purchase)
+        {
+            return DtoConverter.Convert(transDao.SearchTransactionPurchase(START_Purchase, STOP_Purchase));
+        }
+
+        public IList<TransDto> SearchTransactionSalesPrice(decimal SalesPrice)
+        {
+            return DtoConverter.Convert(transDao.SearchTransactionSalesPrice(SalesPrice));
+        }
+
         public void Update(TransDto trans)
         {
             transDao.Update(DtoConverter.Convert(trans));
         }
-        public IList<TransDto> SearchTransaction(string CustomerName, string ArtistName, decimal SalesPrice, string START_Purchase, string STOP_Purchase, string START_Acquisition, string STOP_Acquisition)
+        /*public IList<TransDto> SearchTransaction(string CustomerName, string ArtistName, decimal SalesPrice, string START_Purchase, string STOP_Purchase, string START_Acquisition, string STOP_Acquisition)
         {
             return DtoConverter.Convert(transDao.SearchTransaction(CustomerName, ArtistName, SalesPrice, START_Purchase, STOP_Purchase, START_Acquisition, STOP_Acquisition));
-        }
+        }*/
     }
 }

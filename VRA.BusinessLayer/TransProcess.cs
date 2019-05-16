@@ -33,7 +33,27 @@ namespace VRA.BusinessLayer
             return new List<TransDto>(Transactions.Values);
         }
 
-        public IList<TransDto> SearchTransaction(string CustomerName, string ArtistName, decimal SalesPrice, string START_Purchase, string STOP_Purchase, string START_Acquisition, string STOP_Acquisition)
+        public IList<TransDto> SearchTransactionAcquisition(string START_Acquisition, string STOP_Acquisition)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<TransDto> SearchTransactionArtist(string ArtistName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<TransDto> SearchTransactionCustomer(string CustomerName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<TransDto> SearchTransactionPurchase(string START_Purchase, string STOP_Purchase)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<TransDto> SearchTransactionSalesPrice(decimal SalesPrice)
         {
             throw new NotImplementedException();
         }

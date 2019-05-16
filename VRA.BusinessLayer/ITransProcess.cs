@@ -38,6 +38,38 @@ namespace VRA.BusinessLayer
         /// </summary>
         /// <param name="id">Номер транзакции</param>
         void Delete(int id);
-        IList<TransDto> SearchTransaction(string CustomerName, string ArtistName, decimal SalesPrice, string START_Purchase, string STOP_Purchase, string START_Acquisition, string STOP_Acquisition);
+        /// <summary>
+        /// Поиск транзакции по Клиенту
+        /// </summary>
+        /// <param name="CustomerName">Имя клиента</param>
+        /// <returns></returns>
+        IList<TransDto> SearchTransactionCustomer(string CustomerName);
+        /// <summary>
+        /// Поиск транзакции по Художнику
+        /// </summary>
+        /// <param name="ArtistName">Имя художника</param>
+        /// <returns></returns>
+        IList<TransDto> SearchTransactionArtist(string ArtistName);
+        /// <summary>
+        /// Поиск транзакции по Цене продажи
+        /// </summary>
+        /// <param name="SalesPrice">Цена продажи</param>
+        /// <returns></returns>
+        IList<TransDto> SearchTransactionSalesPrice(decimal SalesPrice);
+        /// <summary>
+        /// Поиск транзакции по дате продажи
+        /// </summary>
+        /// <param name="START_Purchase">Начало периода</param>
+        /// <param name="STOP_Purchase">Конец периода</param>
+        /// <returns></returns>
+        IList<TransDto> SearchTransactionPurchase(string START_Purchase, string STOP_Purchase);
+        /// <summary>
+        /// Поиск транзакции по дате покупки
+        /// </summary>
+        /// <param name="START_Acquisition">Начало периода</param>
+        /// <param name="STOP_Acquisition">Конец периода</param>
+        /// <returns></returns>
+        IList<TransDto> SearchTransactionAcquisition(string START_Acquisition, string STOP_Acquisition);
+        //IList<TransDto> SearchTransaction(string CustomerName, string ArtistName, decimal SalesPrice, string START_Purchase, string STOP_Purchase, string START_Acquisition, string STOP_Acquisition);
     }
 }

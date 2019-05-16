@@ -83,7 +83,39 @@ namespace VRA
 
         private void btnSearchTrans_Click(object sender, RoutedEventArgs e)
         {
-            this.FoundTransactions = ProcessFactory.GetTransProcess().SearchTransaction(this.cbTransClient.Text, this.cbTransArtist.Text, decimal.Parse(this.TransSales.Text), this.dpTransPurchasesStart.Text, this.dpTransPurchaseStop.Text, this.dpTransSalesStart.Text, this.dpTransSalesStop.Text);
+            /*this.FoundTransactions = ProcessFactory.GetTransProcess().SearchTransaction(this.cbTransClient.Text, this.cbTransArtist.Text, decimal.Parse(this.TransSales.Text), this.dpTransPurchasesStart.Text, this.dpTransPurchaseStop.Text, this.dpTransSalesStart.Text, this.dpTransSalesStop.Text);
+            this.exec = true;
+            this.Close();*/
+            if(ClientSearch.IsChecked != null && ClientSearch.IsChecked.Value)
+            {
+                this.FoundTransactions = ProcessFactory.GetTransProcess().SearchTransactionCustomer(this.cbTransClient.Text);
+                this.exec = true;
+                this.Close();
+            }
+            if(ArtistSearch.IsChecked != null && ArtistSearch.IsChecked.Value)
+            {
+                this.FoundTransactions = ProcessFactory.GetTransProcess().SearchTransactionArtist(this.cbTransArtist.Text);
+                this.exec = true;
+                this.Close();
+            }
+            if(SalesSearch.IsChecked !=null && SalesSearch.IsChecked.Value)
+            {
+                this.FoundTransactions = ProcessFactory.GetTransProcess().SearchTransactionSalesPrice(decimal.Parse(this.TransSales.Text));
+                this.exec = true;
+                this.Close();
+            }
+            if(SaleDateSearch.IsChecked !=null && SaleDateSearch.IsChecked.Value)
+            {
+                this.FoundTransactions = ProcessFactory.GetTransProcess().SearchTransactionPurchase(this.dpTransPurchaseStart.Text, this.dpTransPurchaseStop.Text);
+                this.exec = true;
+                this.Close();
+            }
+            if(PurchaseDateSearch !=null && PurchaseDateSearch.IsChecked.Value)
+            {
+                this.FoundTransactions = ProcessFactory.GetTransProcess().SearchTransactionAcquisition(this.dpTransSalesStart.Text, this.dpTransSalesStop.Text);
+                this.exec = true;
+                this.Close();
+            }
         }
 
         private void btnCancelTrans_Click(object sender, RoutedEventArgs e)
